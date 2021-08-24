@@ -1,0 +1,385 @@
+$primaryColor: #fbca08;
+$white: #ffffff;
+$fontStyle: "montserrat-bold", sans-serif;
+$radius: 12px;
+
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #161415 url(../../assets/images/bg.jpg) no-repeat center center
+    fixed;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+  position: relative;
+  margin: 0;
+  @media (max-width: 991px) {
+    max-height: auto;
+    min-height: 100vh;
+  }
+}
+.logo {
+  margin: 50px auto 0 auto;
+}
+.container {
+  text-align: center;
+  box-sizing: border-box;
+}
+.h2 {
+  color: $primaryColor;
+  font-size: 40px;
+  font-family: $fontStyle;
+  padding: 20px 0;
+  @media (max-width: 991px) {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    font-size: 35px;
+  }
+}
+.description {
+  // width: 50%;
+  margin: 0 auto;
+  line-height: 2em;
+  font-weight: bold;
+  color: #fff;
+  ul {
+    margin: 0;
+    padding: 0;
+    @media (max-width: 991px) {
+      width: 90%;
+      margin: 0 auto;
+    }
+    li {
+      list-style: none;
+      // text-transform: capitalize;
+    }
+  }
+}
+.underline {
+  border: solid $primaryColor;
+  border-width: 5px 0 0;
+  margin: 19px auto 12px;
+  height: 0;
+  width: 100px;
+  @media (max-width: 991px) {
+    margin: 20px auto 50px auto;
+  }
+}
+
+.store {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+.form {
+  display: flex;
+  background-color: red;
+  flex-direction: column;
+  @media (max-width: 991px) {
+    width: 80%;
+    background: pink;
+    margin: 0 auto;
+  }
+  h3 {
+    text-align: center;
+  }
+  button {
+    margin-top: 20px;
+    border: none;
+    border-radius: $radius;
+    outline: none;
+    padding: 15px 30px;
+  }
+}
+.formControl {
+  div {
+    padding: 10px 0;
+  }
+  input {
+    width: 100%;
+    height: 60px;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    color: #000;
+    font-weight: bold;
+    @media (max-width: 991px) {
+      text-align: center;
+      height: 50px;
+    }
+  }
+}
+.inputPlaceholder::placeholder {
+  color: #000;
+  font-weight: bold;
+}
+.counter {
+  // background-color: red;
+  display: flex;
+  width: 30%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0 auto;
+  justify-content: center;
+  @media (max-width: 991px) {
+    width: 90%;
+    margin: 50px auto 30px auto;
+    // flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .time {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    color: $white;
+    @media (max-width: 991px) {
+      padding: 8px;
+    }
+    .no {
+      font-size: 52px;
+      @media (max-width: 991px) {
+        font-size: 30px;
+      }
+    }
+    .tick {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      @media (max-width: 991px) {
+        font-size: 13px;
+      }
+    }
+  }
+}
+.more {
+  bottom: 0;
+  display: flex;
+  width: 45%;
+  margin: 0 auto;
+  flex-direction: column;
+  text-align: start;
+  @media (max-width: 991px) {
+    flex-direction: column;
+    width: 90%;
+    // margin-bottom: 30px;
+  }
+}
+.storewrap {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 991px) {
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  .play {
+    display: flex;
+    width: 300px;
+    background-color: white;
+    border-radius: $radius;
+    padding: 10px 30px;
+  }
+}
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-column: 4;
+  grid-row: 2;
+  @media (max-width: 991px) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .first {
+    grid-column: 1/3;
+  }
+  .second {
+    grid-column: 3/5;
+  }
+  .third {
+    grid-column: 1/4;
+    @media (max-width: 991px) {
+      grid-column: 1/2;
+    }
+  }
+  .fourth {
+    grid-column: 4/5;
+    display: flex;
+    @media (max-width: 991px) {
+      grid-column: 1/2;
+    }
+    input {
+      border-radius: $radius;
+      outline: none;
+      border: none;
+      font-weight: bold;
+      box-sizing: border-box;
+      width: 100%;
+      cursor: pointer;
+      font-size: 15px;
+      // text-transform: uppercase;
+      @media (max-width: 991px) {
+        height: 50px;
+      }
+    }
+  }
+}
+.footer {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #171212;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  @media screen and (max-width: 991px) {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+  .copy {
+    color: $white;
+    word-spacing: 0.3em;
+    text-shadow: 0px 1px 2px rgb(0 0 0 / 80%);
+    font-size: 14px;
+    padding: 20px 30px;
+  }
+}
+.socials {
+  ul {
+    margin: 0 50px 0 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    @media (max-width: 991px) {
+      margin: 0;
+    }
+    li {
+      margin: 10px 10px 20px 0;
+      padding: 5px 10px;
+      .tiny {
+        height: 25px;
+        width: 25px;
+        color: $primaryColor;
+      }
+    }
+  }
+}
+
+.tao {
+  display: flex;
+  column-gap: 8%;
+  width: 60%;
+  margin: 30px auto 200px auto;
+  justify-content: center;
+  @media (max-width: 991px) {
+    flex-direction: column;
+    width: 90%;
+    margin: 60px auto 100px auto;
+  }
+}
+.inputWrap {
+  width: 46%;
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+}
+.gamesWrap {
+  width: 60%;
+  @media (max-width: 991px) {
+    width: 100%;
+    row-gap: 20px;
+  }
+}
+.games {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  column-gap: 40px;
+  padding: 10px;
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
+}
+.gamecard {
+  background-color: $white;
+  background-color: #000;
+  align-items: center;
+  border-radius: 10px;
+  width: 100%;
+  color: $white;
+  box-shadow: 0 0 5px white;
+  display: flex;
+  padding: 15px;
+  cursor: pointer;
+  box-sizing: border-box;
+  @media (max-width: 991px) {
+    justify-content: center;
+    box-shadow: 0 0 5px #ffffff;
+  }
+}
+.gamecardone {
+  @media (max-width: 991px) {
+    margin-bottom: 40px;
+  }
+}
+.font {
+  width: 40px;
+  height: 40px;
+}
+.hgh {
+  font-size: 15px;
+}
+.hghg {
+  font-size: 15px;
+}
+.juki {
+  font-size: 24px;
+  text-transform: capitalize;
+  padding: 5px 0 0 0;
+}
+.nami {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  margin-left: 20px;
+}
+.emaildiv {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+.emailInput {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 20px;
+  color: #000;
+  font-weight: bold;
+}
+.submitInput {
+  width: 100%;
+  height: 50px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+.comingsoon {
+  padding: 0 0 20px 0;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  font-weight: bold;
+}
