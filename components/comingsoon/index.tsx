@@ -123,7 +123,7 @@ const ComingSoon = () => {
       return
     }
     try{
-      const response = await axios.post('http://3.129.39.178/api/v1/users', {
+      const response = await axios.post('http://3.15.189.5/api/v1/users', {
         name: name,
         email: email
       })
