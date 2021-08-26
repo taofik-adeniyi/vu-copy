@@ -18,8 +18,16 @@ import {
   faFacebook,
   faGooglePlus,
 } from "@fortawesome/free-brands-svg-icons";
+import axios from "axios";
 
 const ComingSoon = () => {
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [nameError, setNameError] = useState('')
+  const [step, setStep] = useState(1)
+
+  const [emailError, setEmailError] = useState('')
+
   const calculateTimeLeft = () => {
     let year = new Date().getFullYear();
 
@@ -105,9 +113,29 @@ const ComingSoon = () => {
     }
   }, 1000);
   useEffect(() => {}, []);
+  const handleWishList = async (e: any) => {
+    e.preventDefault()
+    if(name === ''){
+      setNameError('Name cannot be empty')
+    }
+    if(email === ''){
+      setEmailError('Email cannot be empty')
+      return
+    }
+    try{
+      const response = await axios.post('http://3.129.39.178/api/v1/users', {
+        name: name,
+        email: email
+      })
+      console.log('wishlist response is', response)
+      response.status === 201 ? setStep(2) : ''
+    }catch(error){
+      console.log('wishlist form error', error)
+    }
+  }
   return (
     <div className={classes.wrap}>
-      <div></div>
+      {/* <div></div> */}
       <div className={classes.logo}>
         <Image src={vioudigital} alt="vioudigital" width={72} height={72} />
       </div>
@@ -150,29 +178,43 @@ const ComingSoon = () => {
         </div>
 
         <div className={classes.tao}>
-          {/* <div className={classes.inputWrap}>
+          {step === 1 && <div className={classes.inputWrap}>
+            <form onSubmit={handleWishList}>
             <div>
                   <div style={{color: 'white', padding: '10px', fontWeight: 'bold'}}>Sign up for our newsletter</div>
               <div className={classes.emaildiv}>
                 <input
                 className={classes.emailInput}
                   type="text"
-                  id="email"
-                  placeholder="email address"
-                  name="email"
+                  id="name"
+                  placeholder="Name"
+                  name="name"
+                  onChange={(e)=> setName(e.target.value)}
                 />
               </div>
-              <div>
+              {!name ? nameError && <div style={{color: 'red', padding: '0 0 10px 0', textAlign: 'left'}}>{nameError}</div>: ''}
+              <div className={classes.emaildiv}>
                 <input
-                  type="button"
-                  value="get notified"
-                  className={classes.submitInput}
+                className={classes.emailInput}
+                  type="text"
                   id="email"
+                  placeholder="Email address"
                   name="email"
+                  onChange={(e)=> setEmail(e.target.value)}
                 />
+              </div>
+              {!email ? emailError && <div style={{color: 'red', padding: '0 0 10px 0', textAlign: 'left'}}>{emailError}</div> : ''}
+              <div>
+                <button
+                  type="submit"
+                  className={classes.submitInput}
+                  style={{cursor: 'pointer'}}
+                >get notified</button>
               </div>
             </div>
-          </div> */}
+            </form>
+          </div>}
+          {step === 2 && <div style={{color: 'white', fontWeight: 'bold', fontSize: '25px', padding: '60px 0 0 0', textAlign: 'center'}}>Thank you we would get in touch with you soon!</div>}
           <div className={classes.gamesWrap}>
             <div className={classes.comingsoon}>Coming soon on</div>
             <div className={classes.games}>
