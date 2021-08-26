@@ -5,6 +5,7 @@ $radius: 12px;
 
 .wrap {
   width: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   background: #161415 url(../../assets/images/bg.jpg) no-repeat center center
@@ -280,7 +281,7 @@ $radius: 12px;
   display: flex;
   column-gap: 8%;
   width: 60%;
-  margin: 30px auto 200px auto;
+  margin: 130px auto 200px auto;
   justify-content: center;
   @media (max-width: 991px) {
     flex-direction: column;
