@@ -124,7 +124,8 @@ const ComingSoon = () => {
       return
     }
     try{
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_WISH_URL}/users`, {
+      // const response = await axios.post(`${process.env.NEXT_PUBLIC_WISH_URL}/users`, {
+      const response = await axios.post('http://www.vioudigital.com/api/v1/users', {
         name: name,
         email: email
       })
