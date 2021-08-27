@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import classes from "./comingsoon.module.scss";
 import vioudigital from "../../assets/images/vioudigital.png";
+import { message } from 'antd';
 
 // fontawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -19,6 +20,9 @@ import {
   faGooglePlus,
 } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
+import "antd/dist/antd.css";
+
+
 
 const ComingSoon = () => {
   const [name, setName] = useState('')
@@ -26,6 +30,7 @@ const ComingSoon = () => {
   const [nameError, setNameError] = useState('')
   const [step, setStep] = useState(1)
   const [conerr, setConErr] = useState()
+  const [loading, setLoading] = useState(false)
 
   const [emailError, setEmailError] = useState('')
 
@@ -116,6 +121,7 @@ const ComingSoon = () => {
   useEffect(() => {}, []);
   const handleWishList = async (e: any) => {
     e.preventDefault()
+    setLoading(true)
     if(name === ''){
       setNameError('Name cannot be empty')
     }
@@ -129,12 +135,22 @@ const ComingSoon = () => {
         email: email
       })
       console.log('wishlist response is', response)
-      response.status === 201 ? alert('Thank you we would get in touch with you soon!') : ''
+      if(response.status === 201){
+        setLoading(false)
+        message.success({content: 'Thank you we would get in touch with you soon!', duration: 5})
+        setName('')
+        setEmail('')
+      }
     }catch(error){
-      alert(`${error.response.data.message}`)
+      message.error(`${error.response.data.message}`)
       // error.response.status === 400 ? alert(`${error.response.data.message}`) : ''
       // console.log('wishlist form error', error.response.statusText)
+      setName('')
+      setEmail('')
       setConErr(error)
+      setLoading(false)
+     
+
     }
   }
   
@@ -195,6 +211,7 @@ const ComingSoon = () => {
                   id="name"
                   placeholder="Name"
                   name="name"
+                  value={name}
                   onChange={(e)=> setName(e.target.value)}
                 />
               </div>
@@ -206,6 +223,7 @@ const ComingSoon = () => {
                   id="email"
                   placeholder="Email address"
                   name="email"
+                  value={email}
                   onChange={(e)=> setEmail(e.target.value)}
                 />
               </div>
@@ -215,7 +233,7 @@ const ComingSoon = () => {
                   type="submit"
                   className={classes.submitInput}
                   style={{cursor: 'pointer'}}
-                >get notified</button>
+                >{loading? '..sending' : 'get notified'}</button>
               </div>
             </div>
             </form>
