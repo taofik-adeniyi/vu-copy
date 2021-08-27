@@ -131,7 +131,8 @@ const ComingSoon = () => {
       console.log('wishlist response is', response)
       response.status === 201 ? alert('Thank you we would get in touch with you soon!') : ''
     }catch(error){
-      error.response.status === 400 ? alert(`${error.response.data.message}`) : ''
+      alert(`${error.response.data.message}`)
+      // error.response.status === 400 ? alert(`${error.response.data.message}`) : ''
       // console.log('wishlist form error', error.response.statusText)
       setConErr(error)
     }
