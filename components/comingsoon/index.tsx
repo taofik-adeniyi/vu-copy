@@ -142,7 +142,7 @@ const ComingSoon = () => {
         setEmail('')
       }
     }catch(error){
-      message.error(`${error.response.data.message}`)
+      message.error(`${error?.response?.data?.message || 'connection error'}`)
       // error.response.status === 400 ? alert(`${error.response.data.message}`) : ''
       // console.log('wishlist form error', error.response.statusText)
       setName('')
