@@ -124,16 +124,15 @@ const ComingSoon = () => {
       return
     }
     try{
-      // const response = await axios.post(`${process.env.NEXT_PUBLIC_WISH_URL}/users`, {
-      const response = await axios.post('http://www.vioudigital.com/api/v1/users', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_WISH_URL}/users`, {
         name: name,
         email: email
       })
       console.log('wishlist response is', response)
-      response.status === 201 ? setStep(2) : ''
-      // response.status === 400 ? setConErr(response) : ''
+      response.status === 201 ? alert('Thank you we would get in touch with you soon!') : ''
     }catch(error){
-      console.log('wishlist form error', error.response.statusText)
+      error.response.status === 400 ? alert(`${error.response.data.message}`) : ''
+      // console.log('wishlist form error', error.response.statusText)
       setConErr(error)
     }
   }
