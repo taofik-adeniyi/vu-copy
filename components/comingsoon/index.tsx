@@ -25,6 +25,7 @@ const ComingSoon = () => {
   const [email, setEmail] = useState('')
   const [nameError, setNameError] = useState('')
   const [step, setStep] = useState(1)
+  const [conerr, setConErr] = useState()
 
   const [emailError, setEmailError] = useState('')
 
@@ -123,16 +124,19 @@ const ComingSoon = () => {
       return
     }
     try{
-      const response = await axios.post('http://www.vioudigital.com/api/v1/users', {
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_WISH_URL}/users`, {
         name: name,
         email: email
       })
       console.log('wishlist response is', response)
-      response.status === 201 ? setStep(2) : ''
+      response.status === 201 ? alert('Thank you we would get in touch with you soon!') : ''
     }catch(error){
-      console.log('wishlist form error', error)
+      error.response.status === 400 ? alert(`${error.response.data.message}`) : ''
+      // console.log('wishlist form error', error.response.statusText)
+      setConErr(error)
     }
   }
+  
   return (
     <div className={classes.wrap}>
       {/* <div></div> */}
@@ -181,7 +185,8 @@ const ComingSoon = () => {
           {step === 1 && <div className={classes.inputWrap}>
             <form onSubmit={handleWishList}>
             <div>
-                  <div style={{color: 'white', padding: '10px', fontWeight: 'bold'}}>Sign up for our newsletter</div>
+              {/* {conerr && <div style={{color: 'red'}}>{conerr}</div>} */}
+                  <div style={{color: 'white', padding: '10px', fontWeight: 'bold'}}>Sign up for our waitlist</div>
               <div className={classes.emaildiv}>
                 <input
                 className={classes.emailInput}
@@ -260,10 +265,14 @@ const ComingSoon = () => {
         <div className={classes.socials}>
           <ul>
             <li>
+            <a target="_blank" href="https://twitter.com/vioudigital/" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faTwitter} className={classes.tiny} />
+              </a>
             </li>
             <li>
+            <a target="_blank" href="https://instagram.com/vioudigital/" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} className={classes.tiny} />
+              </a>
             </li>
             <li>
               <FontAwesomeIcon icon={faFacebook} className={classes.tiny} />
