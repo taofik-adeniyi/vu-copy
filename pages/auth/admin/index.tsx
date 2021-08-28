@@ -1,7 +1,7 @@
 import { Form, Input, Button, Checkbox } from "antd";
 import Image from "next/image";
 import "antd/dist/antd.css";
-import vioudigital from "../../../../assets/images/vioudigital.png";
+import vioudigital from "../../../assets/images/vioudigital.png";
 import styles from "./style.module.scss";
 
 const Demo = () => {
