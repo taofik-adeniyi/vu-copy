@@ -294,7 +294,9 @@ const ComingSoon = () => {
               </a>
             </li>
             <li>
+            <a target="_blank" href="https://facebook.com/VIOUDigital/" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faFacebook} className={classes.tiny} />
+              </a>
             </li>
           </ul>
         </div>
