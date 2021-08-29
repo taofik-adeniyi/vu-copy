@@ -86,15 +86,18 @@ const dataSource = [
     address: '10 Downing Street',
   },
 ];
+const MyBg = () => {
+  return <div style={{ margin: "20px 0" }}>
+  <Image src={vioudigital} alt="vioudigital" width={120} height={120} />
+</div>
+}
   return (
     <>
     {step === 'one' && 
     <form onSubmit={loginIn}>
     <div className={styles.wrapper}>
       <div className={styles.wrap}>
-        <div style={{ margin: "20px 0" }}>
-          <Image src={vioudigital} alt="vioudigital" width={120} height={120} />
-        </div>
+        <MyBg />
         <div className={styles.inputWrap}>
           <div className={styles.label}>
             <label htmlFor="email">Email</label>
@@ -139,12 +142,17 @@ const dataSource = [
           <>
          
 
-          {/* <div className={styles.wrapper}> */}
-            {/* <div className={styles.wraptwo}> */}
-<h1>Waitlist details</h1>
-<Table dataSource={users} columns={columns} />
-            {/* </div> */}
-          {/* </div> */}
+          <div className={styles.wrapper}>
+<div style={{width: '70%', margin: '100px auto'}}>
+  <div style={{textAlign: 'center'}}>
+
+<MyBg />
+  </div>
+<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+  <div><h1 style={{color: 'white'}}>Waitlist details</h1></div><div style={{marginRight: '50px', color: 'white', fontSize: '20px', cursor: 'pointer'}} onClick={()=>setStep('one')}>logout</div></div>
+<Table dataSource={users} columns={columns} exportable />
+          </div>
+</div>
         </>}
    </>
 
