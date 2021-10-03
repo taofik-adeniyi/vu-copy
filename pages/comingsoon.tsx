@@ -1,19 +1,22 @@
-import React from 'react'
-import Head from 'next/head'
-import ComingSoon from '../components/comingsoon'
+import React from "react";
+import Head from "next/head";
+import ComingSoon from "../comps/comingsoon";
 
 const comingsoon = () => {
-    return (
-        <>
-        <Head>
+  return (
+    <>
+      <Head>
         <title>Coming Soon</title>
-        <meta name="description" content="Viou digital platform for content creator across africa" />
+        <meta
+          name="description"
+          content="Viou digital platform for content creator across africa"
+        />
       </Head>
       <div>
-         <ComingSoon />   
+        <ComingSoon />
       </div>
-        </>
-    )
-}
+    </>
+  );
+};
 
-export default comingsoon
+export default comingsoon;

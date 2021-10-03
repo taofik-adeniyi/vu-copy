@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+:root {
+  --primaryFont: 'Overlock';
+  --secondaryFont: 'Avenir';
+  --primarycolor: #000;
+  --secondarycolor: #fff;
+  --tetiarycolor: #1EAAB2;
+
+
+}
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "montserrat-bold", sans-serif;
 }
 
 a {
@@ -12,4 +21,29 @@ a {
 
 * {
   box-sizing: border-box;
+}
+@font-face {
+  font-family: "Avenir";
+  font-display: swap;
+  src: url('../assets/fonts/FontsFree-Net-AvenirLTStd-Book.ttf') format("truetype");
+}
+.adeniyi {
+  font-family: var(--primaryFont);
+}
+.taofik {
+  font-family: var(--secondaryFont);
+  color: var(--primarycolor);
+}
+.maps-image {
+  height: 500px;
+}
+.tags {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+.tags li {
+  margin: 0 20px;
+  border-bottom: 1px solid #fff;
 }
