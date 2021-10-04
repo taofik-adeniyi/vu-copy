@@ -167,7 +167,7 @@ const register = () => {
                     fontSize: "14px",
                   }}
                 >
-                  Password Strenght
+                  Password Strength
                 </div>
                 <div style={{display: 'flex', width: '350px', gap: '3px'}}>
                     <PassWordStrenght background="red" />

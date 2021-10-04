@@ -17,7 +17,7 @@ const confirmemail = () => {
           alt="Confirmation email background image"
           src="/confirm-email.svg"
           layout="fill"
-          objectFit="cover"
+          objectFit="contain"
           loading="lazy"
         />
       </div>

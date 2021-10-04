@@ -21,6 +21,42 @@ display: flex;
 padding: 1rem 1.2rem;
 `
 
+export const StyledInputTelephone = styled(Input).attrs({
+    type: 'tel'
+})`
+${Input}
+display: flex;
+padding: 1rem 1.2rem;
+`
+
+export const StyledSelectTag = styled.select`
+width: 350px;
+  color: gray;
+  padding: .9rem 1rem;
+  font-size: 14px;
+  border: 1px solid #C4C4C4;
+border-radius: 10px;
+outline: none;
+
+  option {
+    color: black;
+    background: white;
+    display: flex;
+    white-space: pre;
+    min-height: 20px;
+  }
+`
+
+export const StyledTextArea = styled.textarea`
+min-height: 117px;
+width: 350px;
+background: #F7F7F7;
+border: 1px solid #C4C4C4;
+border-radius: 10px;
+outline: none;
+padding: 1rem 1.2rem;
+`
+
 export const StyledInputEmail = styled(Input).attrs({
     type: 'email'
 })`
