@@ -3,6 +3,8 @@ import { StyledFooter } from "../styled/layout";
 import brand from "../assets/svg/viou-digital.svg"
 import socials from "../assets/svg/socials.svg"
 import Image from "next/image"
+import Link from 'next/link'
+import { StyledLink } from "../styled/header";
 
 const currentYear = new Date().getFullYear()
 
@@ -39,7 +41,7 @@ const Footer = () => {
         <div style={{width: '24%'}}>
         <strong>company</strong>
           <ul>
-            <li>About</li>
+            <li><Link passHref href="/about"><a>About</a></Link></li>
             <li>Careers</li>
             <li>Support</li>
             <li>Media kit </li>

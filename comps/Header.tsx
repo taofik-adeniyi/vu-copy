@@ -8,8 +8,13 @@ import cartsearch from "../assets/svg/cart-search.svg"
 import { faCartPlus, faSearchLocation, faSearch } from "@fortawesome/free-solid-svg-icons";
 import MyIcon from "./MyIcon";
 import { StyledLink, StyledNav } from '../styled/header';
+import { useRouter } from 'next/router';
 
 const Header = () => {
+  const router = useRouter()
+  const handleNavigation = ( {navigation}:any) => {
+    router.push(navigation)
+  }
     return (
         <StyledHeader>
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
@@ -24,10 +29,10 @@ const Header = () => {
           </div>
         <aside style={{display: 'flex', justifyContent: 'space-around', minWidth: '270px'}}>
           <Image src={cartsearch} width={60} height={40} alt="Your Cart and Search" />
-          <StyledButton color="#fff">
+          <StyledButton color="#fff" onClick={()=>router.push('/sign-in')}>
           sign in
           </StyledButton>
-          <StyledButton background="#1EAAB2">
+          <StyledButton background="#1EAAB2" onClick={()=>router.push('/register')}>
           sign up
           </StyledButton>
         </aside>

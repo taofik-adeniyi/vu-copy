@@ -12,6 +12,7 @@ interface TitleProps {
   color?: any;
   width?: string;
   border?: string;
+  onClick?: any;
 }
 
 export const StyledButton = styled.button<TitleProps>`
