@@ -1,9 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
+import styles from '../styles/imagecontainer.module.scss'
 
-const ImageContainer = () => {
+const ImageContainer = ({children}:any) => {
     return (
-        <div>
-            
+        <div className={styles.wrapper}>
+            {children}
         </div>
     )
 }

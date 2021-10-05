@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { StyledLink } from '../styled/header'
 
 const signin = () => {
-    const [step, setStep] = useState(0)
+    const [step, setStep] = useState(1)
     if(step === 0) {
 
     
@@ -35,14 +35,14 @@ const signin = () => {
                     </div>
                     <div style={{fontFamily: 'Avenir'}}>
                         <Link href="/forgot-password" passHref>
-                            <StyledLink>Forgot password</StyledLink>
+                            <StyledLink transform="capitalize">Forgot password</StyledLink>
                         </Link>
                     </div>
                     <div style={{margin: '20px 0'}}>
                         <StyledButton background="#1EAAB2" width="350px">sign in</StyledButton>
                     </div>
                     <div style={{fontFamily: 'Avenir', fontSize: '14px'}}>
-                    Don’t have an account? <Link href="/register" passHref><StyledLink>Create a free account</StyledLink></Link>
+                    Don’t have an account? <Link href="/register" passHref><StyledLink transform="none">Create a free account</StyledLink></Link>
                     </div>
                 </form>
             </div>

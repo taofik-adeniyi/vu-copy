@@ -207,7 +207,7 @@ const register = () => {
                 <StyledButton background="#1EAAB2" width="350px">create my account</StyledButton>
             </div>
             <div style={{color: '#fff', fontSize: '14px', margin: '10px 0 0 0', fontFamily: 'Avenir'}}>
-            Already a member? <Link href="/sign-in" passHref><StyledLink>Sign In</StyledLink></Link>
+            Already a member? <Link href="/sign-in" passHref><StyledLink transform="none">Sign In</StyledLink></Link>
             </div>
           </form>
         </div>

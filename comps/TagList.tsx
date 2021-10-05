@@ -1,5 +1,8 @@
 import React from 'react'
 import { StyledButton } from '../pages/global-styles'
+import Link from 'next/link'
+import { StyledLink } from '../styled/header'
+
 
 const TagList = () => {
     return (
@@ -12,7 +15,7 @@ const TagList = () => {
           <div style={{fontFamily: 'Avenir', display: 'flex', color: 'white'}}>
             <ul className="tags">
               <li>Tags:</li>
-              <li>All</li>
+              <li><Link href="/library" passHref><StyledLink transform="capitalize">All</StyledLink></Link></li>
               <li>Ads</li>
               <li>Documentry</li>
               <li>Portraits</li>

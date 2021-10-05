@@ -6,14 +6,15 @@ export const StyledNav = styled.nav`
 `
 
 interface LinkType {
-  margin?: string; 
+  margin?: string;
+  transform?: string;
 }
 
 export const StyledLink = styled.a<LinkType>`
     width: 100px;
     color: red;
     margin: ${({margin})=> margin ? margin : '1rem .5rem;'}
-    text-transform: uppercase;
+    text-transform: ${({transform})=> transform ? transform : 'uppercase'};
     font-size: 16px;
     font-family: ${({theme})=> theme.family.primary};
   color: ${(props) => (props.theme.colors.secondary)};

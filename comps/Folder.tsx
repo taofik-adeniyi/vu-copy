@@ -8,7 +8,7 @@ type FolderType = {
 };
 const Folder = ({ title = "Folder name", data }: FolderType) => {
   return (
-    <div style={{ width: "100%", margin: '40px 0', padding: "0 100px" }}>
+    <div style={{ width: "100%", margin: '100px 0', padding: "0 100px" }}>
       <div style={{ color: "white", fontSize: "20px", fontFamily: "Avenir" }}>
         {title}
       </div>
@@ -16,7 +16,7 @@ const Folder = ({ title = "Folder name", data }: FolderType) => {
         style={{
             width: "100%",
             minHeight: '500px',
-          margin: "20px 0",
+          margin: "20px 0 0 0",
           display: "flex",
           gap: "10px",
           flexWrap: "wrap",

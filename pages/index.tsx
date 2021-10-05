@@ -15,6 +15,8 @@ import styles from "../styles/home.module.scss";
 import stats from "../assets/svg/stats.svg"
 import nikon from "../assets/svg/nikon-camera.svg"
 import goldplay from "../assets/svg/goldplay.svg"
+import TagList from "../comps/TagList";
+import Link from 'next/link'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -44,25 +46,10 @@ export default function Home() {
       </div>
 
       <div style={{padding: '50px 0', width: '100%', color: 'white'}}>
+        
         <div style={{width: '90%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '0 auto'}}>
-          <div>
-          <StyledButton color="#fff" border="white" width="200px">
-            All
-          </StyledButton>
-          </div>
-          <div style={{fontFamily: 'Avenir', display: 'flex'}}>
-            <ul className="tags">
-              <li>Tags:</li>
-              <li>All</li>
-              <li>Ads</li>
-              <li>Documentry</li>
-              <li>Portraits</li>
-              <li>Studios</li>
-              <li>Models</li>
-              <li>Skits</li>
-              <li>Business</li>
-            </ul>
-          </div>
+<TagList/>
+          
         </div>
         <div style={{padding: '80px 0', display: 'flex', justifyContent: 'space-between'}}>
   <div style={{width: '20%', backgroundColor: 'gray', height: '300px', position: 'relative'}}>
@@ -88,9 +75,14 @@ export default function Home() {
   </div>
   <div style={{fontFamily: 'Avenir', display: 'flex',  position: 'absolute', left: 30, right: 30, justifyContent: 'space-between', alignItems: 'flex-end', bottom: 20}}>
     <div style={{display: 'flex', alignItems: 'center'}}>
-      <div style={{width: '60px', height: '60px', backgroundColor: 'black', borderRadius: '50%'}}></div>
+      <Link href="/user/asabe">
+        <a><div style={{width: '60px', height: '60px', backgroundColor: 'black', borderRadius: '50%'}}></div></a>
+      </Link>
       <div style={{display: 'flex', flexDirection: 'column', marginLeft: '20px'}}>
+      <Link href="/user/asabe"><a>
+
         <div style={{color: '#fff'}}>Asabe Vincent</div>
+      </a></Link>
         <div style={{color: '#FFCF30'}}>Expert</div>
       </div>
     </div>
