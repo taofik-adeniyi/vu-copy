@@ -10,15 +10,16 @@ import MyIcon from "./MyIcon";
 import { StyledLink, StyledNav } from '../styled/header';
 import { useRouter } from 'next/router';
 
-const Header = () => {
+const Header = ({isBorder}: any) => {
   const router = useRouter()
-  const handleNavigation = ( {navigation}:any) => {
-    router.push(navigation)
-  }
+  
     return (
-        <StyledHeader>
+        <StyledHeader border={isBorder}>
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <Link href="/" passHref><StyledLink margin="0">
+
           <Image src={brand} alt="Viou Digital Logo" width={80} height={50} />
+            </StyledLink></Link>
         <StyledNav style={{marginLeft: '30px'}}>
           <Link href="/explore" passHref><StyledLink>explore</StyledLink></Link>
           <Link href="/explore" passHref><StyledLink>find work</StyledLink></Link>

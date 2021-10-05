@@ -65,9 +65,24 @@ export default function Home() {
           </div>
         </div>
         <div style={{padding: '80px 0', display: 'flex', justifyContent: 'space-between'}}>
-  <div style={{width: '23%', backgroundColor: 'gray', height: '300px'}}></div>
+  <div style={{width: '20%', backgroundColor: 'gray', height: '300px', position: 'relative'}}>
+  <Image
+          alt="A beautiful dog Image"
+          src="/asabesmall.svg"
+          layout="fill"
+          objectFit="cover"
+          loading="lazy"
+        />
+  </div>
 <Reel>
-  <Image src={nikon} width={0} height={0} />
+<Image
+          alt="Nikon Camera Image"
+          src={nikon}
+          layout="fill"
+          objectFit="cover"
+          loading="lazy"
+        />
+  {/* <Image src={nikon} width={0} height={0} /> */}
   <div style={{position: 'absolute', top: '40%', cursor: 'pointer', left: '40%'}}>
   <Image src={goldplay} width={100} height={50} />
   </div>
@@ -79,13 +94,22 @@ export default function Home() {
         <div style={{color: '#FFCF30'}}>Expert</div>
       </div>
     </div>
-    <div style={{paddingBottom: '5px'}}>
+    <div style={{paddingBottom: '5px', cursor: 'pointer'}}>
+      
       <Image src={stats} width={100} height={0} />
     </div>
   </div>
 
 </Reel>
-  <div style={{width: '23%', backgroundColor: 'gray', height: '300px'}}></div>
+  <div style={{width: '20%', backgroundColor: 'gray', height: '300px', position: 'relative'}}>
+  <Image
+          alt="A beautiful dog Image"
+          src="/dog.svg"
+          layout="fill"
+          objectFit="cover"
+          loading="lazy"
+        />
+  </div>
         </div>
         <div style={{textAlign: 'center'}}>
         <StyledButton width="300px" background="#1EAAB2">explore more content</StyledButton>
@@ -213,19 +237,23 @@ export default function Home() {
       </div>
       <div
         style={{
+          width: '100%',
           backgroundColor: "gray",
           minHeight: "550px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          position: "relative"
         }}
       >
+        
         <div
           style={{
             background: "rgba(0, 0, 0, 0.73)",
             padding: "30px 0 60px 0",
             textAlign: "center",
             position: "relative",
+            zIndex: 1,
             fontFamily: "Overlock",
             width: "350px",
           }}
@@ -245,10 +273,13 @@ export default function Home() {
             REQUEST A SHOOT
           </StyledButton>
         </div>
-        {/* <div style={{border: '2px solid blue'}}>
-        <img src="/maps.svg" alt="My Google maps" style={{width: '100vw', height: '400px'}} />
-        </div> */}
-        {/* <Image src={maps} alt="the map background" className="maps-image" height={400} layout="responsive" /> */}
+        <Image
+          alt="Forgot page background image"
+          src="/maps.svg"
+          layout="fill"
+          objectFit="cover"
+          loading="lazy"
+        />
       </div>
     </MyLayout>
   );

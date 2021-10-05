@@ -38,7 +38,7 @@ line-height: 1.4rem;
 ` 
 
 export const Reel = styled.div`
-    width: 45%;
+    width: 55%;
     min-height: 300px;
     background: gray;
     position: relative;

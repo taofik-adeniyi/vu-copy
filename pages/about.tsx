@@ -7,20 +7,20 @@ import { Box } from "../styled/home";
 
 const about = () => {
   return <MyLayout>
-      <div style={{display: 'flex', backgroundColor: 'white', minHeight: '400px'}}>
-          <div style={{width: '50%', display: 'flex', flexDirection: 'column'}}>
-          <h1>About Viou</h1>
-          <p>Viou is the go-to destination for finding and hiring amazing visual content creators and showcasing creative work. It is home to the best of African Photographers and Cinematographers.</p>
+      <div style={{display: 'flex', padding: '80px 50px 20px 100px', backgroundColor: 'white', minHeight: '400px'}}>
+          <div style={{width: '45%', display: 'flex', flexDirection: 'column'}}>
+          <h1 style={{fontSize: '64px', fontFamily: 'Overlock'}}>About <span style={{color: '#00B3BE'}}>Viou</span></h1>
+          <p style={{fontSize:'18px', lineHeight: '1.6em', fontFamily: 'Avenir'}}>Viou is the go-to destination for finding and hiring amazing visual content creators and showcasing creative work. It is home to the best of African Photographers and Cinematographers.</p>
           </div>
-          <div style={{width: '50%'}}>
+          <div style={{width: '55%'}}>
 
           </div>
       </div>
-      <div style={{display: 'flex', backgroundColor: 'white', minHeight: '400px'}}>
+      <div style={{display: 'flex', padding: '80px 50px 100px 100px', backgroundColor: 'white', minHeight: '400px'}}>
           <div style={{width: '50%'}}></div>
           <div style={{width: '50%'}}>
-              <h1>We have a vibrant community</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli</p>
+              <h1 style={{fontSize: '64px', fontFamily: 'Overlock'}}>We have a vibrant community</h1>
+              <p style={{fontSize:'18px', lineHeight: '1.6em', fontFamily: 'Avenir'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate veli</p>
               <StyledButton background="#1EAAB2" width="160px">join viou</StyledButton>
           </div>
       </div>
