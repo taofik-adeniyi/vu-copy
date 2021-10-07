@@ -20,7 +20,7 @@ const register = () => {
     }
     const handleRegister = (e: any) => {
       e.preventDefault()
-      router.push('/library')
+      router.push('/confirm-email')
     }
 
   if (step === 0) {
