@@ -22,11 +22,11 @@ const Header = ({isBorder}: any) => {
           <Image src={brand} alt="Viou Digital Logo" width={80} height={50} />
             </StyledLink></Link>
         <StyledNav style={{marginLeft: '30px'}}>
-          <Link href="/explore" passHref><StyledLink>explore</StyledLink></Link>
-          <Link href="/explore" passHref><StyledLink>find work</StyledLink></Link>
-          <Link href="/explore" passHref><StyledLink>academy</StyledLink></Link>
-          <Link href="/explore" passHref><StyledLink>upload visuals</StyledLink></Link>
-          <Link href="/explore" passHref><StyledLink>how it works</StyledLink></Link>
+          <Link href="/library" passHref><StyledLink>explore</StyledLink></Link>
+          <Link href="/" passHref><StyledLink>find work</StyledLink></Link>
+          <Link href="/" passHref><StyledLink>academy</StyledLink></Link>
+          <Link href="/" passHref><StyledLink>upload visuals</StyledLink></Link>
+          <Link href="/" passHref><StyledLink>how it works</StyledLink></Link>
         </StyledNav>
           </div>
          <div style={{display: 'flex', alignItems: 'center'}}>

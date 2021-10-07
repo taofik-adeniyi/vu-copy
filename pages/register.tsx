@@ -9,9 +9,19 @@ import {
 } from "../styled/register";
 import { StyledLink } from "../styled/header";
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const register = () => {
-  const [step, setStep] = useState(1);
+  const router = useRouter()
+  const [step, setStep] = useState(0);
+    const handleAccountType = (e: any) => {
+      e.preventDefault()
+      setStep(1)
+    }
+    const handleRegister = (e: any) => {
+      e.preventDefault()
+      router.push('/library')
+    }
 
   if (step === 0) {
     return (
@@ -78,7 +88,7 @@ const register = () => {
                 Choose your account type?
               </div>
             </div>
-            <StyledButton background="#1EAAB2">create my account</StyledButton>
+            <StyledButton background="#1EAAB2" hover="#1EAAB2" hcolor="#000" onClick={handleAccountType}>create my account</StyledButton>
           </div>
           <div
             style={{
@@ -111,7 +121,7 @@ const register = () => {
                 Choose your account type?
               </div>
             </div>
-            <StyledButton background="#93D500">create my account</StyledButton>
+            <StyledButton background="#93D500" hover="#93D500" hcolor="#000" onClick={handleAccountType}>create my account</StyledButton>
           </div>
         </div>
       </div>
@@ -204,7 +214,7 @@ const register = () => {
                 </div>
             </div>
             <div>
-                <StyledButton background="#1EAAB2" width="350px">create my account</StyledButton>
+                <StyledButton background="#1EAAB2" width="350px" onClick={handleRegister}>create my account</StyledButton>
             </div>
             <div style={{color: '#fff', fontSize: '14px', margin: '10px 0 0 0', fontFamily: 'Avenir'}}>
             Already a member? <Link href="/sign-in" passHref><StyledLink transform="none">Sign In</StyledLink></Link>

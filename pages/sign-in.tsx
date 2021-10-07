@@ -4,12 +4,15 @@ import { StyledInputPassword, StyledInputText, StyledSelectTag, StyledTextArea }
 import { StyledButton } from './global-styles'
 import Link from 'next/link'
 import { StyledLink } from '../styled/header'
+import { useRouter } from 'next/router'
 
 const signin = () => {
-    const [step, setStep] = useState(1)
-    if(step === 0) {
-
-    
+    const router = useRouter()
+    const handleSignIn = (e: any) => {
+        e.preventDefault()
+        router.push('/new-user')
+    }
+    const [step, setStep] = useState(0)
     return (
         <div style={{display: 'flex'}}>
             <div style={{ width: "45%", minHeight: "100vh", position: "relative" }}>
@@ -39,7 +42,10 @@ const signin = () => {
                         </Link>
                     </div>
                     <div style={{margin: '20px 0'}}>
-                        <StyledButton background="#1EAAB2" width="350px">sign in</StyledButton>
+                        <StyledButton 
+                        background="#1EAAB2" width="350px" 
+                        onClick={handleSignIn}
+                        >sign in</StyledButton>
                     </div>
                     <div style={{fontFamily: 'Avenir', fontSize: '14px'}}>
                     Don’t have an account? <Link href="/register" passHref><StyledLink transform="none">Create a free account</StyledLink></Link>
@@ -49,50 +55,6 @@ const signin = () => {
       </div>
         </div>
     )
-}else {
-    return (
-        <div style={{display: 'flex'}}>
-            <div style={{width: '55%', minHeight: '100vh'}}>
-                <div style={{width: '350px', margin: '60px 0 0 100px', fontFamily: 'Overlock'}}>
-                    <h1 style={{color: '#00F0FE', fontSize: '36px'}}>Welcome Asabe! <br/>Let us get to know you</h1>
-                    <div style={{fontSize: '18px', color: '#F4F4F4'}}>PERSONAL DETAILS</div>
-                    <form style={{marginTop: '30px'}}>
-                        <div style={{width: '73px', height: '73px', backgroundColor: '#F4F4F4', position: 'relative', borderRadius: '50%'}}>
-
-                        </div>
-                        <div style={{margin: '20px 0'}}>
-                            <StyledInputText placeholder="Firstname" />
-                        </div>
-                        <div style={{margin: '20px 0'}}>
-                            <StyledSelectTag>
-                                <option>Location</option>
-                                <option>Abuja</option>
-                                <option>Lagos</option>
-                                <option>Phortharcout</option>
-                            </StyledSelectTag>
-                        </div>
-                        <div style={{margin: '20px 0'}}>
-                            <StyledTextArea placeholder="Bio" />
-                        </div>
-                        <div style={{margin: '20px 0'}}>
-                            <StyledButton background="#1EAAB2" width="350px">save and continue</StyledButton>
-                        </div>
-                    </form>
-                </div>
-            </div>
- <div style={{ width: "45%", backgroundColor: '#C4C4C4', minHeight: "100vh", position: "relative" }}>
-        <Image
-          alt="Welcome page background image"
-          src="/welcomebackground.svg"
-          layout="fill"
-          objectFit="cover"
-          loading="lazy"
-        />
-      </div>
-      
-        </div>
-    )
-}
 }
 
 export default signin

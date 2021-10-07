@@ -13,6 +13,8 @@ interface TitleProps {
   width?: string;
   border?: string;
   onClick?: any;
+  hover?: string;
+  hcolor?: string;
 }
 
 export const StyledButton = styled.button<TitleProps>`
@@ -32,8 +34,8 @@ export const StyledButton = styled.button<TitleProps>`
   font-weight: bold;
 
   &:hover {
-    color: white;
-    border: 1px solid #fff;
+    color: ${({hcolor})=> hcolor || 'white'};
+    border: 1px solid ${({hover})=> hover || '#fff'};
     background: transparent;
     opacity: 1;
   }
