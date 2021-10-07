@@ -2,9 +2,9 @@ import React from 'react'
 import Image from 'next/image'
 import styles from '../styles/imagecontainer.module.scss'
 
-const ImageContainer = ({children}:any) => {
+const ImageContainer = ({children, small}:any) => {
     return (
-        <div className={styles.wrapper}>
+        <div className={small ? styles.profiletab : styles.wrapper}>
             {children}
         </div>
     )

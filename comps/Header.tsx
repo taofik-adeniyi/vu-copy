@@ -9,6 +9,7 @@ import { faCartPlus, faSearchLocation, faSearch } from "@fortawesome/free-solid-
 import MyIcon from "./MyIcon";
 import { StyledLink, StyledNav } from '../styled/header';
 import { useRouter } from 'next/router';
+import ProfileTab from './ProfileTab';
 
 const Header = ({isBorder}: any) => {
   const router = useRouter()
@@ -28,8 +29,11 @@ const Header = ({isBorder}: any) => {
           <Link href="/explore" passHref><StyledLink>how it works</StyledLink></Link>
         </StyledNav>
           </div>
-        <aside style={{display: 'flex', justifyContent: 'space-around', minWidth: '270px'}}>
+         <div style={{display: 'flex', alignItems: 'center'}}>
+         <div style={{ margin: '0 10px'}}>
           <Image src={cartsearch} width={60} height={40} alt="Your Cart and Search" />
+          </div>
+        <aside style={{display: 'flex', margin: '0 10px', justifyContent: 'space-around', minWidth: 'fit-content'}}>
           <StyledButton color="#fff" onClick={()=>router.push('/sign-in')}>
           sign in
           </StyledButton>
@@ -37,6 +41,8 @@ const Header = ({isBorder}: any) => {
           sign up
           </StyledButton>
         </aside>
+        {/* <ProfileTab/> */}
+         </div>
       </StyledHeader>
     )
 }

@@ -48,6 +48,11 @@ export default function Home() {
       <div style={{padding: '50px 0', width: '100%', color: 'white'}}>
         
         <div style={{width: '90%', display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: '0 auto'}}>
+        <div>
+          <StyledButton color="#fff" border="white" width="180px">
+            All
+          </StyledButton>
+          </div>
 <TagList/>
           
         </div>
