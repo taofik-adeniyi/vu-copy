@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Folder from '../../comps/Folder'
 import MyLayout from '../../comps/MyLayout'
 import TagList from '../../comps/TagList'
@@ -6,10 +6,42 @@ import { RequestShoot } from '../../styled/styles'
 import { StyledButton } from '../global-styles'
 import Image from 'next/image'
 import nikon from '../../assets/svg/nikon-camera.svg'
+import Modal from '../../comps/Modal'
+import { useRouter } from 'next/router'
 
 const galleryimage = () => {
+    const [request, setRequest] = useState(false)
+    const router = useRouter()
+
+    const handleRequest = () => {
+        console.log('yes cicked')
+        setRequest(!request)
+    }
+    const NavigateRequest = () => {
+        router.push('/request-shoot')
+    }
     return (
+        <>
+        {
+            request && <Modal>
+                <h1 style={{fontFamily: 'Overlock', fontSize: '34px'}}>Request a shoot</h1>
+        <div style={{margin: '30px 0', textAlign: 'center'}}>
+        <h3 style={{fontFamily: 'Avenir', fontSize: '24px'}}>I want to Request a:</h3>
+        <div style={{width: '100%', fontWeight: 'bold', fontFamily: 'Avenir', margin :'10px 0 20px 0',  display: 'flex', textAlign: 'center', border: '1px solid #333', borderRadius: '10px', background: 'transparent'}}>
+            <div style={{width: '50%', cursor: 'pointer', padding: '15px 0'}} onClick={NavigateRequest}>Photo Shoot</div>
+            <div style={{width: '50%', cursor: 'pointer', borderRadius: '0 10px 10px 0', padding: '15px 0', height: 'fit-content', background: '#1EAAB2'}} onClick={NavigateRequest}>Video Shoot</div>
+        </div>
+        <p style={{fontFamily: 'Avenir', fontSize: '13px', fontWeight: 600}}>
+          I will not be able to edit or cancel a request for an expert creative
+          after one hour of creating the request
+        </p>
+        </div>
+            </Modal>
+        }
+        
         <MyLayout>
+                 
+
             <div style={{width: '100%', margin: '40px 0', padding :'50px 100px', display: 'flex', justifyContent: 'space-between'}}>
                 <div style={{width: '60%'}}>
                 <div style={{width: '100%', margin: '0 0 30px 0', backgroundColor: 'gray', height: '400px', position: 'relative'}}>
@@ -102,10 +134,13 @@ const galleryimage = () => {
                 <p style={{fontSize: '22px', padding: '20px', fontWeight: 'bold', fontFamily: 'Overlock'}}>
                 Be spoilt for options by get ting multiple entries and representations from our vast community of creators when you create custom requests.
                 </p>
-                <StyledButton background="#1EAAB2" width="300px">request a shoot</StyledButton>
+                <StyledButton background="#1EAAB2" width="300px" hover="#1EAAB2" hcolor="#000" onClick={handleRequest}>request a shoot</StyledButton>
                 </div>
             </RequestShoot>
+            
+            
         </MyLayout>
+        </>
     )
 }
 

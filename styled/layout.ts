@@ -6,7 +6,7 @@ interface HeaderType {
 }
 export const StyledHeader = styled.header<HeaderType>`
 margin: 0;
-padding: 1rem 5rem;
+padding: 1rem 5%;
 display: flex;
 justify-content: space-between;
 align-items: center;
