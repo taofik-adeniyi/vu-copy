@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { StyledButton } from '../pages/global-styles';
@@ -10,11 +10,23 @@ import MyIcon from "./MyIcon";
 import { StyledLink, StyledNav } from '../styled/header';
 import { useRouter } from 'next/router';
 import ProfileTab from './ProfileTab';
+import Portal from './hoc/Portal'
+import Modal from './Modal'
+import Uploads from './Uploads';
 
 const Header = ({isBorder}: any) => {
   const router = useRouter()
+  const [upload, setUpload] = useState(false)
   
     return (
+      <>
+      {
+        upload && <Portal>
+         <Modal width="55%">
+          <Uploads />
+         </Modal>
+        </Portal>
+      }
         <StyledHeader border={isBorder}>
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Link href="/" passHref><StyledLink margin="0">
@@ -25,7 +37,7 @@ const Header = ({isBorder}: any) => {
           <Link href="/library" passHref><StyledLink>explore</StyledLink></Link>
           <Link href="/" passHref><StyledLink>find work</StyledLink></Link>
           <Link href="/" passHref><StyledLink>academy</StyledLink></Link>
-          <Link href="/" passHref><StyledLink>upload visuals</StyledLink></Link>
+          <div onClick={()=> setUpload(!upload)}><StyledLink>upload visuals</StyledLink></div>
           <Link href="/" passHref><StyledLink>how it works</StyledLink></Link>
         </StyledNav>
           </div>
@@ -41,9 +53,10 @@ const Header = ({isBorder}: any) => {
           sign up
           </StyledButton>
         </aside>
-        {/* <ProfileTab/> */}
+        <ProfileTab/>
          </div>
       </StyledHeader>
+      </>
     )
 }
 

@@ -15,6 +15,7 @@ interface TitleProps {
   onClick?: any;
   hover?: string;
   hcolor?: string;
+  padding?: string;
 }
 
 export const StyledButton = styled.button<TitleProps>`
@@ -22,7 +23,7 @@ export const StyledButton = styled.button<TitleProps>`
   background: ${(props) => (props.background ? props.background : "transparent")};
   border: 1px solid ${(props)=> (props.border ? props.border : 'transparent')};
   color: ${(props) => (props.color ? props.color : props.theme.colors.main)};
-  padding: .8rem 1.2rem;
+  padding: ${({padding})=> padding ? padding : '.8rem 1.2rem'};
   font-family: var(--primaryFont);
   text-transform: uppercase;
   cursor: pointer;

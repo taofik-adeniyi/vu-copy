@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
-
-export const Input = styled.input`
-width: 350px;
+type InputType = {
+  width?: string;
+  radius?: string;
+}
+export const Input = styled.input<InputType>`
+width: ${({width})=> width ? width: '350px'};
 background: #F7F7F7;
 border: 1px solid #C4C4C4;
 box-sizing: border-box;
-border-radius: 10px;
+border-radius: ${({radius})=> radius ? radius: '10px'};
 outline: none;
-colro: #575757;
+color: #575757;
 font-size: 14px;
 font-family: ${({theme})=> theme.family.secondary};
 `

@@ -17,7 +17,7 @@ interface ModalContainerType {
 }
 
 export const ModalContainer = styled.div<ModalContainerType>`
-padding: 30px 60px;
+/* padding: 30px 60px; */
 background-color : #EFEFEF; 
 width: ${({width})=> width ? width : '500px'};
 border-radius: 10px; 
