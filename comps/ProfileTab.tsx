@@ -131,7 +131,7 @@ const ProfileTab = () => {
                 </Link>
               </ProfileList>
               <ProfileList>
-                <Link href="#" passHref>
+                <Link href="/favorites" passHref>
                     <StyledMenuLink margin="0">
                         <StyledHeartIcon/>
                 <div>favorites</div>
@@ -155,7 +155,7 @@ const ProfileTab = () => {
                 </Link>
               </ProfileList>
               <ProfileList>
-              <Link href="#" passHref>
+              <Link href="/manage-request" passHref>
                 <StyledMenuLink margin="0">
                     <StyledFolderIcon />
                     <div>manage request</div>

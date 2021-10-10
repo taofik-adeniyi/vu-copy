@@ -4,12 +4,14 @@ interface ImageType {
     width?: string;
     height?: string;
     rounded?: string;
+    onClick?: any;
 }
 export const StyledImageContainer = styled.div<ImageType>`
     position: relative;
     width: ${({width})=> width ? width : '200px'};
     height: ${({height})=> height ? height : '200px'};
-    border-radius: ${({rounded})=> rounded ? rounded : '50%'}
+    border-radius: ${({rounded})=> rounded ? rounded : '50%'};
+    cursor: pointer;
     
     
     

@@ -5,13 +5,18 @@ import Image from "next/image";
 type FolderType = {
   title: string;
   data?: any;
+  description?: string;
 };
-const Folder = ({ title = "Folder name", data }: FolderType) => {
+const Folder = ({ title = "Folder name", data, description }: FolderType) => {
   return (
     <div style={{ width: "100%", margin: '100px 0', padding: "0 100px" }}>
       <div style={{ color: "white", fontSize: "20px", fontFamily: "Avenir" }}>
         {title}
       </div>
+      {
+        description && <div style={{ color: "white", fontSize: "20px", fontFamily: "Avenir" }}>{description}</div>
+      }
+      
       <div
         style={{
             width: "100%",

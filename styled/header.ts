@@ -11,7 +11,6 @@ interface LinkType {
 }
 
 export const StyledLink = styled.a<LinkType>`
-    width: 100px;
     color: red;
     margin: ${({margin})=> margin ? margin : '1rem .5rem;'};
     text-transform: ${({transform})=> transform ? transform : 'uppercase'};
@@ -19,6 +18,15 @@ export const StyledLink = styled.a<LinkType>`
     font-family: ${({theme})=> theme.family.primary};
   color: ${(props) => (props.theme.colors.secondary)};
 
+`
+
+export const PlainDiv = styled.div<LinkType>`
+    color: red;
+    margin: ${({margin})=> margin ? margin : '1rem .5rem;'};
+    text-transform: ${({transform})=> transform ? transform : 'uppercase'};
+    font-size: 16px;
+    font-family: ${({theme})=> theme.family.primary};
+  color: ${(props) => (props.theme.colors.secondary)};
 `
 
 

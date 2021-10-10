@@ -2,9 +2,11 @@ import React from 'react'
 import { StyledImageContainer } from '../styled/styles';
 import Image from 'next/image'
 import { gallery } from "../const";
+import { useRouter } from "next/router"
 
 
 const Library = () => {
+  const router = useRouter()
     return (
         <>
         <div
@@ -20,7 +22,17 @@ const Library = () => {
         >
           {gallery?.map((images) => {
             return (
-              <StyledImageContainer key={images.id} width="250px" height="200px">
+              <StyledImageContainer 
+                key={images.id} 
+                width="250px" 
+                height="200px" 
+                onClick={() => {
+                  router.push({
+                    pathname: '/library/[lid]',
+                    query: { pid: images.id },
+                  })
+                }}
+                >
                 <Image
                   alt="Nikon Camera Image"
                   src={ '/gallery/' + images.name}

@@ -7,7 +7,7 @@ import brand from "../assets/svg/viou-digital.svg"
 import cartsearch from "../assets/svg/cart-search.svg"
 import { faCartPlus, faSearchLocation, faSearch } from "@fortawesome/free-solid-svg-icons";
 import MyIcon from "./MyIcon";
-import { StyledLink, StyledNav } from '../styled/header';
+import { StyledLink, PlainDiv, StyledNav } from '../styled/header';
 import { useRouter } from 'next/router';
 import ProfileTab from './ProfileTab';
 import Portal from './hoc/Portal'
@@ -37,7 +37,8 @@ const Header = ({isBorder}: any) => {
           <Link href="/library" passHref><StyledLink>explore</StyledLink></Link>
           <Link href="/" passHref><StyledLink>find work</StyledLink></Link>
           <Link href="/" passHref><StyledLink>academy</StyledLink></Link>
-          <div onClick={()=> setUpload(!upload)}><StyledLink>upload visuals</StyledLink></div>
+          {/* <PlainDiv onClick={()=> setUpload(!upload)}>upload visuals</PlainDiv> */}
+          <Link href="/"><StyledLink onClick={()=> setUpload(!upload)}>upload visuals</StyledLink></Link>
           <Link href="/" passHref><StyledLink>how it works</StyledLink></Link>
         </StyledNav>
           </div>

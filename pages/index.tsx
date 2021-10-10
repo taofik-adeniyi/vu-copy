@@ -17,6 +17,7 @@ import nikon from "../assets/svg/nikon-camera.svg"
 import goldplay from "../assets/svg/goldplay.svg"
 import TagList from "../comps/TagList";
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -24,6 +25,7 @@ const Title = styled.h1`
 `;
 
 export default function Home() {
+  const router = useRouter()
   return (
     <MyLayout>
       <div className={styles.firstwrapper}>
@@ -109,7 +111,7 @@ export default function Home() {
   </div>
         </div>
         <div style={{textAlign: 'center'}}>
-        <StyledButton width="300px" background="#1EAAB2">explore more content</StyledButton>
+        <StyledButton width="300px" background="#1EAAB2" onClick={()=> router.push('/library')}>explore more content</StyledButton>
         </div>
       </div>
 
