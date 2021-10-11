@@ -6,6 +6,8 @@ import { StyledCancelIcon } from "../styled/icons";
 interface ModalType {
     children?: any;
     width?: string;
+    height?: string;
+    cancel?: boolean;
 }
 const Modal = (props: ModalType) => {
     const router = useRouter()
@@ -14,10 +16,11 @@ const Modal = (props: ModalType) => {
     }
   return (
     <StyledOverLay>
-      <ModalContainer width={props.width}>
+      <ModalContainer width={props.width} height={props.height}>
+        {props.cancel && 
         <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end', margin: '20px 50px 0 0'}}>
         <StyledCancelIcon/>
-        </div>
+        </div>}
           {
               props.children
           }

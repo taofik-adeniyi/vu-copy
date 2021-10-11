@@ -14,12 +14,14 @@ z-index: 10;
 
 interface ModalContainerType {
     width?: string;
+    height?: string;
 }
 
 export const ModalContainer = styled.div<ModalContainerType>`
 /* padding: 30px 60px; */
 background-color : #EFEFEF; 
 width: ${({width})=> width ? width : '500px'};
+height: ${({height})=> height ? height : ''};
 border-radius: 10px; 
 position: absolute;
 display: flex;

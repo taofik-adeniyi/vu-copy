@@ -5,6 +5,7 @@ interface ImageType {
     height?: string;
     rounded?: string;
     onClick?: any;
+    border?: boolean;
 }
 export const StyledImageContainer = styled.div<ImageType>`
     position: relative;
@@ -23,8 +24,9 @@ export const StyledDisplayPicture = styled.div<ImageType>`
     height: ${({height})=> height ? height : '200px'};
     
     div {
+        border: ${({border})=> border ? '2px solid gold': ''};
+        border-radius: ${({rounded})=> rounded ? rounded : ''};
         img {
-            border-radius: ${({rounded})=> rounded ? rounded : ''}
         }
     }
     
@@ -45,6 +47,7 @@ export const Flex = styled.div`
 
 interface NewInputType {
     width?: string;
+    height?: string;
 }
 export const NewStyledInput = styled.input.attrs({
     type: 'text',
@@ -63,7 +66,7 @@ min-height: 30px;
 
 export const NewStyledTextArea = styled.textarea<NewInputType>`
 width: ${({width})=> width ? width : '300px'};
-height: 150px;
+height: ${({height})=> height ? height : '150px'};
 border: 0.5px solid #000000;
 box-sizing: border-box;
 border-radius: 5px;
