@@ -155,7 +155,7 @@ const ProfileTab = () => {
                 </Link>
               </ProfileList>
               <ProfileList>
-              <Link href="#" passHref>
+              <Link href="/request-shoot" passHref>
                 <StyledMenuLink margin="0">
                     <StyledFolderIcon />
                     <div>request a shoot/video</div>

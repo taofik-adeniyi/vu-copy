@@ -6,15 +6,19 @@ type FolderType = {
   title: string;
   data?: any;
   description?: string;
+  element?: any;
 };
-const Folder = ({ title = "Folder name", data, description }: FolderType) => {
+const Folder = ({ title = "Folder name", data, description, element }: FolderType) => {
   return (
     <div style={{ width: "100%", margin: '100px 0', padding: "0 100px" }}>
-      <div style={{ color: "white", fontSize: "20px", fontFamily: "Avenir" }}>
+      <div style={{ color: "white", fontSize: "20px", fontFamily: "Avenir", display: 'flex', justifyContent: 'space-between' }}>
+        <div style={{width: '40%'}}>
         {title}
+        </div>
+        {element && element()}
       </div>
       {
-        description && <div style={{ color: "white", fontSize: "20px", fontFamily: "Avenir" }}>{description}</div>
+        description && <div style={{ width: '50%', color: "white", fontSize: "20px", fontFamily: "Avenir" }}>{description}</div>
       }
       
       <div

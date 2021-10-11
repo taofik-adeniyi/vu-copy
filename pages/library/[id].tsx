@@ -12,7 +12,7 @@ import { StyledInputText } from '../../styled/register'
 
 const galleryimage = () => {
     const [request, setRequest] = useState(false)
-    const [paymentModal, setPaymentModal] = useState()
+    const [paymentModal, setPaymentModal] = useState(false)
     const router = useRouter()
 
     const handleRequest = () => {

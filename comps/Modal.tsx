@@ -1,6 +1,7 @@
 import React from "react";
 import { StyledOverLay, ModalContainer } from "../styled/modal";
 import { useRouter } from 'next/router'
+import { StyledCancelIcon } from "../styled/icons";
 
 interface ModalType {
     children?: any;
@@ -14,6 +15,9 @@ const Modal = (props: ModalType) => {
   return (
     <StyledOverLay>
       <ModalContainer width={props.width}>
+        <div style={{display: 'flex', width: '100%', justifyContent: 'flex-end', margin: '20px 50px 0 0'}}>
+        <StyledCancelIcon/>
+        </div>
           {
               props.children
           }
