@@ -7,6 +7,7 @@ import {
   ReviewCardImage,
   ReviewCardText,
 } from "../styled/home";
+import TheBox from '../comps/TheBox';
 import { StyledButton } from "./global-styles";
 import facecapafro from "../assets/svg/facecapafro.svg";
 import maps from "../assets/svg/maps.svg";
@@ -115,38 +116,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        style={{
-          backgroundColor: "#272727",
-          width: "100%",
-          textAlign: "center",
-          margin: "0 auto",
-          height: "480px",
-          padding: "50px 0",
-        }}
-      >
-        <h2
-          style={{
-            fontFamily: "Overlock",
-            color: "white",
-            padding: "0 0 40px 0",
-            margin: 0,
-          }}
-        >
-          Top Three Viou Creators for the Week
-        </h2>
-        <div
-          style={{
-            display: "flex",
-            gap: "20px",
-            justifyContent: "center",
-          }}
-        >
-          <Box />
-          <Box />
-          <Box />
-        </div>
-      </div>
+
+      <TheBox />
 
       <div
         style={{
