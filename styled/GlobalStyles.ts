@@ -11,6 +11,21 @@ const GlobalStyles = createGlobalStyle`
         background-color: black;
     }
 `
-
+export const StyledTable = styled.table`
+font-family: 'Open Sans';
+overflow: auto;
+tr {
+    color: #BFBFBF;
+    th {
+        min-width: 200px;
+        padding: 10px 0;
+    }
+    td {
+        border-bottom: 0.5px solid #585858;
+        text-align: center;
+        padding: 20px 0;
+    }
+}
+`
 
 export default GlobalStyles
