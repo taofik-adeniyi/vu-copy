@@ -110,3 +110,43 @@ export const ProfileMenu = styled.div`
     min-width: 240px;
     padding: 0 20px;
 `
+
+export const StyledOl = styled.ol`
+   list-style: none;
+   counter-reset: item;
+   display: flex;
+   font-family: 'Avenir';
+ li {
+   counter-increment: item;
+   margin: 5px 20px 5px 0;
+   font-size: 14px;
+ }
+ li:before {
+   margin-right: 10px;
+   content: counter(item);
+   background: #93D500;
+   border-radius: 100%;
+   color: white;
+   width: 1.2em;
+   text-align: center;
+   display: inline-block;
+ }
+ li:before:active {
+     background: red;
+ }
+`
+
+export const ProfileEditBase = styled.div`
+    border-bottom: 1.3px solid rgba(168, 168, 168, 0.59);
+    width: 85%;
+    margin: 10px auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+`
+
+export const ProfileDataWrapper = styled.div`
+width: 85%;
+margin: 20px auto;
+`
