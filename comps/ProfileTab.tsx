@@ -111,15 +111,23 @@ const ProfileTab = () => {
           {menu && (
             <ProfileMenu>
               <div style={{display: 'flex', borderBottom: '1px solid #777777', alignItems: 'flex-start', gap: '10px', justifyContent: 'space-between', fontFamily: "Overlock", padding: '10px 20px' }}>
-                <StyledDisplayPicture width="60px" height="60px" rounded="50%">
+              <Link href="/profile" passHref>
+              <StyledLink transform="capitalize" margin="0">
+                <StyledDisplayPicture onClick={()=> router.push('/profile')} width="60px" height="60px" rounded="50%">
                   <Image src="/mydp.svg" layout="fill" loading="lazy" />
                 </StyledDisplayPicture>
+                </StyledLink>
+                </Link>
                 <div style={{ display: "flex", gap: '5px', flexDirection: "column" }}>
-                  <h1 style={{ color: "white", fontSize: "22px" }}>
+                  <Link href="/profile" passHref>
+                    <StyledLink transform="capitalize" margin="0">
+                    <h1 style={{ color: "white", fontSize: "22px" }}>
                     Ope Onanuga
                   </h1>
                   <h4>oponad@gmail.com</h4>
-                  <StyledButton onClick={()=> router.push('/profile')} padding=".4rem 1rem" color="#000" hcolor="#fff" background="#fff">edit profile</StyledButton>
+                    </StyledLink>
+                  </Link>
+                  <StyledButton onClick={()=> router.push('/profile/edit')} padding=".4rem 1rem" color="#000" hcolor="#fff" background="#fff">edit profile</StyledButton>
                 </div>
               </div>
               <ProfileList padding="20px 0" border="1px solid #777777">

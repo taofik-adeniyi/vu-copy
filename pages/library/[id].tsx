@@ -8,9 +8,11 @@ import Image from 'next/image'
 import nikon from '../../assets/svg/nikon-camera.svg'
 import Modal from '../../comps/Modal'
 import { useRouter } from 'next/router'
+import { StyledInputText } from '../../styled/register'
 
 const galleryimage = () => {
     const [request, setRequest] = useState(false)
+    const [paymentModal, setPaymentModal] = useState()
     const router = useRouter()
 
     const handleRequest = () => {
@@ -19,6 +21,9 @@ const galleryimage = () => {
     }
     const NavigateRequest = () => {
         router.push('/request-shoot')
+    }
+    const handleBuy = () => {
+        setPaymentModal(!paymentModal)
     }
     return (
         <>
@@ -36,6 +41,29 @@ const galleryimage = () => {
           after one hour of creating the request
         </p>
         </div>
+            </Modal>
+        }
+
+        {
+            paymentModal && 
+            <Modal width="800px">
+                <div style={{margin: '40px auto', width: '86%',}}>
+                    <h1 style={{fontSize: '24px', fontFamily: 'Overlock'}}>Load your Viou wallet</h1>
+                    <p style={{fontFamily :'Avenir', color: '#636363', fontSize: '15px', width: '60%'}}>You need Viou coins to be able to download premium hi-def videos and high quality images.</p>
+                    <div style={{display: 'flex', width: '100%', gap: '20px', alignItems: 'center'}}>
+                        <div>
+                            <label style={{color: '#1EAAB2', fontFamily: 'Overlock', display: 'inline-block', padding: '10px 0'}} htmlFor="coins">Vious Coins</label>
+                            <StyledInputText width="100%" placeholder="100 Coins" />
+                        </div>
+                        <div style={{marginTop: '30px'}}>=</div>
+                        <div>
+                        <label style={{color: '#1EAAB2', fontFamily: 'Overlock', display: 'inline-block', padding: '10px 0'}} htmlFor="coins">Amount (₦) </label>
+                            <StyledInputText width="100%" placeholder="₦5000" />
+                        </div>
+                        
+                    </div>
+                    <StyledButton style={{  marginTop: '30px'}} width="150px" background="#1EAAB2">pay now</StyledButton>
+                </div>
             </Modal>
         }
         
@@ -119,7 +147,7 @@ const galleryimage = () => {
                             </div>
                         </div>
                         <div style={{display: 'flex', flexDirection: 'column', marginTop: '20px', gap: '20px'}}>
-                            <StyledButton background="#1EAAB2" width="100%">buy video</StyledButton>
+                            <StyledButton background="#1EAAB2" width="100%" onClick={handleBuy}>buy video</StyledButton>
                             <StyledButton color="white" border="white" width="100%">add to cart</StyledButton>
                         </div>
                     </div>
