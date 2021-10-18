@@ -199,4 +199,12 @@ width: 100%;
 overflow-y: auto;
 /* padding-bottom: 50px; */
 `
+
+export const CustomSearch = styled.div`
+border: 1px solid #000000;
+box-sizing: border-box;
+border-radius: 10px;
+display: flex;
+margin: 2rem 0;
+`
 export default GlobalStyles

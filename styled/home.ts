@@ -1,5 +1,18 @@
 import styled from "styled-components";
 
+export const HomeTagWrapper = styled.div`
+width: 90%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 0 auto;
+padding: 50px 0 0 0;
+
+@media (max-width: ${({theme})=> theme.media.mobile}){
+    padding: 50px 0 0 0;
+    }
+
+`
 export const Box = styled.div`
 background: #C4C4C4;
 width: 230px;
@@ -10,6 +23,16 @@ type ReviewProps = {
     width?: string;
     style?: any;
 }
+export const ReviewWrapper = styled.div`
+display: flex;  
+width: 70%;
+margin: 50px auto 0 auto; 
+justify-content: center;
+gap: 30px;
+@media (max-width: ${({theme})=> theme.media.mobile}){
+        flex-direction: column;
+    }
+`
 export const ReviewCard = styled.div<ReviewProps>`
 display: flex;
 height: 180px;
@@ -35,6 +58,7 @@ export const ReviewCardText = styled.div`
 display: flex;
 width: 280px;
 line-height: 1.4rem;
+
 ` 
 
 export const Reel = styled.div`
@@ -42,4 +66,59 @@ export const Reel = styled.div`
     min-height: 300px;
     background: gray;
     position: relative;
+`
+
+export const HomeContentBox = styled.div`
+width: 100%; 
+display: flex;
+  background-color: rgba(0, 0, 0, 0.62);
+  background: url('../assets/images/camerastanddark.png') no-repeat;
+  background-color: lightgray;
+  @media (max-width: ${({theme})=> theme.media.mobile}){
+      flex-direction: column;
+        /* display: none; */
+    }
+`
+export const FirstSection = styled.div`
+    width: 45%; 
+    height: 100%; 
+    padding: 250px 0 50px 80px;
+    @media (max-width: ${({theme})=> theme.media.mobile}){
+        width: 100%;
+        padding: 2rem;
+    }
+`
+
+export const EmptyBox = styled.div`
+width: 55%;
+padding: 5em;
+@media (max-width: ${({theme})=> theme.media.mobile}){
+        display: none;
+    }
+
+`
+export const JoinBox = styled.div`
+    background-color: #fff;
+    font-family: ${({theme})=> theme.family.primary};
+    display: flex;
+
+    @media (max-width: ${({theme})=> theme.media.mobile}){
+        flex-direction: column;
+    }
+`
+export const JoinBoxOne = styled.div`
+width: 40%;
+            margin: 30px 0 0 0;
+            padding: 20px 0 0 80px;
+            @media (max-width: ${({theme})=> theme.media.mobile}){
+        width: 100%;
+        padding: 2rem 7rem 2rem 2rem;
+    }
+` 
+export const JoinBoxImage = styled.div`
+width: 60%; margin: 60px 0; text-align: right;
+@media (max-width: ${({theme})=> theme.media.mobile}){
+        width: 100%;
+        margin: 3.5rem 0 0 0;
+    }
 `

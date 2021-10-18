@@ -12,10 +12,12 @@ import brand from "../assets/svg/viou-digital.svg";
 import Header from "./Header";
 import Footer from "./Footer";
 import { Box } from "../styled/home";
+import MobileMenu from "./MobileMenu";
 
 const MyLayout = ({ children, isBorder }: any) => {
   return (
     <div style={{ height: "100%"}}>
+      
       <Header isBorder />
 
       {children}

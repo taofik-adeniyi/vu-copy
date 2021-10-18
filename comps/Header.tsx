@@ -13,6 +13,7 @@ import ProfileTab from './ProfileTab';
 import Portal from './hoc/Portal'
 import Modal from './Modal'
 import Uploads from './Uploads';
+import MobileMenu from './MobileMenu';
 
 const Header = ({isBorder}: any) => {
   const router = useRouter()
@@ -20,6 +21,9 @@ const Header = ({isBorder}: any) => {
   
     return (
       <>
+      {/* <Portal> */}
+      {/* <MobileMenu/> */}
+      {/* </Portal> */}
       {
         upload && <Portal>
          <Modal width="55%">

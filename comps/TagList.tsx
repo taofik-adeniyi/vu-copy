@@ -2,12 +2,12 @@ import React from 'react'
 import { StyledButton } from '../pages/global-styles'
 import Link from 'next/link'
 import { StyledLink } from '../styled/header'
-import { StyledUl } from '../styled/taglist'
+import { StyledUl, TagListWrapper } from '../styled/taglist'
 
 
 const TagList = () => {
     return (
-        <div style={{width: '100%', display: 'flex'}}>
+        <TagListWrapper>
           <div style={{fontFamily: 'Avenir', display: 'flex', color: 'white'}}>
             <StyledUl>
             <li>Tags:</li>
@@ -21,7 +21,7 @@ const TagList = () => {
               <li>Business</li>
             </StyledUl>
           </div>
-        </div>
+        </TagListWrapper>
     )
 }
 

@@ -41,6 +41,10 @@ export const StyledButton = styled.button<TitleProps>`
     background: transparent;
     opacity: 1;
   }
+
+  @media (max-width: ${({theme})=> theme.media.mobile}){
+        width: 100%;
+    }
   // border: none;
   // padding: .6rem 1.2rem;
   // border-radius: 30px;
