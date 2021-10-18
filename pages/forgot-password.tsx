@@ -3,9 +3,12 @@ import Image from 'next/image'
 import { StyledInputPassword, PassWordStrenght } from '../styled/register'
 import { StyledButton } from './global-styles'
 import { FogotPasswordWrap, FogotPasswordImageWrap, FogotPasswordWrapper, FogotPasswordHolder } from '../styled/forgot-password'
+import Header from '../comps/Header'
 
 const forgotpassword = () => {
     return (
+      <div style={{position: 'absolute', width: '100%'}}>
+    <Header noheader={true} />
         <FogotPasswordWrap>
             <FogotPasswordImageWrap>
         <Image
@@ -57,6 +60,7 @@ const forgotpassword = () => {
           </FogotPasswordHolder>
       </FogotPasswordWrapper>
         </FogotPasswordWrap>
+        </div>
     )
 }
 

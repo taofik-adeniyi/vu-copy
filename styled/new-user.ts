@@ -4,6 +4,7 @@ export const NewUser = styled.div`
 display: flex;
 @media (max-width: ${({theme})=> theme.media.mobile}){
     flex-direction: column;
+    margin-top: 5rem;
 }
 `
 export const NewUserFormWrapper = styled.div`

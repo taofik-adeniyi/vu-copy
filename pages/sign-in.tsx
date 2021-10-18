@@ -6,15 +6,20 @@ import Link from 'next/link'
 import { StyledLink } from '../styled/header'
 import { useRouter } from 'next/router'
 import { LogInImageHolder, LogInWrapper, LogInBox } from '../styled/login'
+import Header from '../comps/Header'
 
 const signin = () => {
     const router = useRouter()
+    console.log('path name is >>>>', router.pathname)
+    const vans = router.pathname === "/sign-in" ? "SIGN UP" : "SIGN IN"
     const handleSignIn = (e: any) => {
         e.preventDefault()
         router.push('/new-user')
     }
     const [step, setStep] = useState(0)
     return (
+        <div style={{position: 'absolute', width: '100%'}}>
+        <Header noheader={true} showvans={vans} />
         <LogInWrapper>
             <LogInImageHolder>
         <Image
@@ -55,6 +60,7 @@ const signin = () => {
             </div>
       </LogInBox>
         </LogInWrapper>
+        </div>
     )
 }
 

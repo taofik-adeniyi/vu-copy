@@ -4,6 +4,7 @@ import { StyledInputText, StyledSelectTag, StyledTextArea } from '../styled/regi
 import { StyledButton } from './global-styles'
 import { useRouter } from 'next/router'
 import { NewUser, NewUserImageWrap, NewUserFormWrapper, NewUserFormHolder } from '../styled/new-user'
+import Header from '../comps/Header'
 
 const newuser = () => {
     const router = useRouter()
@@ -12,6 +13,8 @@ const newuser = () => {
         router.push('/library')
     }
     return (
+        <div style={{position: 'absolute', width: '100%'}}>
+      <Header noheader={true} />
         <NewUser>
             <NewUserFormWrapper>
                 <NewUserFormHolder>
@@ -52,6 +55,7 @@ const newuser = () => {
       </NewUserImageWrap>
       
         </NewUser>
+        </div>
     )
 }
 

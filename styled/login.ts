@@ -4,6 +4,7 @@ export const LogInWrapper = styled.div`
 display: flex;
 @media (max-width: ${({theme})=> theme.media.mobile}){
     flex-direction: column-reverse;
+    margin-top: 5rem;
 }
 `
 export const LogInImageHolder = styled.div`

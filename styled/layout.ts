@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 interface HeaderType {
     border?: boolean;
+    hideheader?: boolean;
 }
 export const StyledHeader = styled.header<HeaderType>`
     margin: 0;
     padding: 1rem 5%;
-    display: flex;
+    display: ${({hideheader})=> hideheader ? 'none': 'flex'};
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -17,6 +18,21 @@ export const StyledHeader = styled.header<HeaderType>`
         display: none;
     }
   
+`
+
+export const StyledMobileHeder = styled.div`
+    display: none;
+    @media (max-width: ${({theme})=> theme.media.mobile}){
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        background: transparent;
+        position: fixed;
+        z-index: 20;
+        max-height: 5rem;
+    }
 `
 export const StyledFooter = styled.footer`
 padding: 50px 0 0 0;

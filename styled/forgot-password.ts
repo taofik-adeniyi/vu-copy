@@ -5,6 +5,7 @@ display: flex;
 width: 100%;
 @media(max-width: ${({theme})=> theme.media.mobile}){
     flex-direction: column-reverse;
+    margin-top: 5rem;
 }
 `
 export const FogotPasswordImageWrap = styled.div`

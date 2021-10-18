@@ -5,11 +5,17 @@ import { FiDownload, FiFacebook, FiTwitter, FiSearch } from "react-icons/fi"
 import { BiSearch } from "react-icons/bi"
 import { TiTimes } from "react-icons/ti"
 import { ImQrcode } from "react-icons/im"
+import { GoThreeBars } from "react-icons/go"
 
 
 export const StyledCaretDown = styled(AiOutlineCaretDown)`
 /* transform: scale(1.5); */
 color: ${({color})=> color ? color: '#979797'};
+`
+
+export const StyledBars = styled(GoThreeBars)`
+transform: scale(2.5);
+color: #fff;
 `
 
 export const StyledCaretUp = styled(AiOutlineCaretUp)`

@@ -14,6 +14,8 @@ import {
   ReviewCardImage,
   ReviewCardText,
   ReviewWrapper,
+  ReelWrapper,
+  Comments
 } from "../styled/home";
 import TheBox from "../comps/TheBox";
 import { StyledButton } from "./global-styles";
@@ -83,7 +85,7 @@ export default function Home() {
           <TagList />
         </HomeTagWrapper>
 
-      <div style={{ padding: "50px 0", width: "100%", color: "white" }}>
+      <ReelWrapper>
         
         <div
           style={{
@@ -198,7 +200,7 @@ export default function Home() {
             explore more content
           </StyledButton>
         </div>
-      </div>
+      </ReelWrapper>
 
       <TheBox />
 
@@ -229,18 +231,7 @@ export default function Home() {
         </JoinBoxImage>
       </JoinBox>
 
-      <div
-        style={{
-          width: "100%",
-          fontFamily: "Overlock",
-          minHeight: "400px",
-          padding: "50px 0 150px 0",
-          backgroundColor: "#EFEFEF",
-          display: "flex",
-          justifyContent: "center",
-          flexDirection: "column",
-        }}
-      >
+      <Comments>
         <div
           style={{ textAlign: "center", fontSize: "36px", fontWeight: "bold" }}
         >
@@ -275,7 +266,7 @@ export default function Home() {
             </ReviewCardText>
           </ReviewCard>
         </ReviewWrapper>
-      </div>
+      </Comments>
       <div
         style={{
           width: "100%",

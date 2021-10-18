@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { StyledButton } from '../pages/global-styles';
-import { StyledHeader } from "../styled/layout";
+import { StyledHeader, StyledMobileHeder } from "../styled/layout";
 import brand from "../assets/svg/viou-digital.svg"
 import cartsearch from "../assets/svg/cart-search.svg"
 import { faCartPlus, faSearchLocation, faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -14,10 +14,13 @@ import Portal from './hoc/Portal'
 import Modal from './Modal'
 import Uploads from './Uploads';
 import MobileMenu from './MobileMenu';
+import { StyledDisplayPicture } from '../styled/styles';
+import { StyledBars } from '../styled/icons';
 
-const Header = ({isBorder}: any) => {
+const Header = ({isBorder, noheader, showvans}: any) => {
   const router = useRouter()
   const [upload, setUpload] = useState(false)
+  const [mobilenav, setMobileNav] = useState(false)
   
     return (
       <>
@@ -25,13 +28,16 @@ const Header = ({isBorder}: any) => {
       {/* <MobileMenu/> */}
       {/* </Portal> */}
       {
+        mobilenav && <MobileMenu close={()=> setMobileNav(!mobilenav)} />
+      }
+      {
         upload && <Portal>
          <Modal width="55%">
           <Uploads />
          </Modal>
         </Portal>
       }
-        <StyledHeader border={isBorder}>
+        <StyledHeader border={isBorder} hideheader={noheader}>
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
             <Link href="/" passHref><StyledLink margin="0">
 
@@ -61,6 +67,15 @@ const Header = ({isBorder}: any) => {
         <ProfileTab/>
          </div>
       </StyledHeader>
+      <StyledMobileHeder>
+        <StyledBars onClick={()=> setMobileNav(!mobilenav)} />
+        <StyledDisplayPicture width="70px" height="70px">
+        <Image src={brand} alt="Viou Digital Logo" layout="fill"  />
+        </StyledDisplayPicture>
+        <div style={{color: 'white', fontFamily: 'Overlock', fontWeight: 'bold', fontSize: '20px'}}>
+          {showvans === "SIGN UP" ? showvans : 'SIGN IN'}
+        </div>
+      </StyledMobileHeder>
       </>
     )
 }

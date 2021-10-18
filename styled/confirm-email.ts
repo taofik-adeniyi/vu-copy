@@ -4,6 +4,7 @@ export const ConfirmEmailWrap = styled.div`
 display: flex;
 @media (max-width: ${({theme})=> theme.media.mobile}){
     flex-direction: column;
+    margin-top: 5rem;
 }
 `
 export const Confirm = styled.div`
@@ -14,6 +15,7 @@ min-height: 100vh;
     width: 100%;
     padding: 0 0 5rem 0;
     min-height: fit-content;
+    min-height: 450px;
 }
 `
 export const ConfirmSubDiv = styled.div`

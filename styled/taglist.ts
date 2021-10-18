@@ -8,7 +8,6 @@ interface UlType {
 export const TagListWrapper = styled.div`
 width: 100%;
 display: flex;
-background: red;
 overflow: auto;
 padding: 20px;
 `

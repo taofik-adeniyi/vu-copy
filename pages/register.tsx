@@ -13,6 +13,8 @@ import {
 import { StyledLink } from "../styled/header";
 import Link from 'next/link'
 import { useRouter } from 'next/router'
+import Header from '../comps/Header'
+
 
 const register = () => {
   const router = useRouter()
@@ -28,6 +30,8 @@ const register = () => {
 
   
     return (
+      <div style={{position: 'absolute', width: '100%'}}>
+      <Header noheader={true} />
       <RegisterWrapper>
         <RegisterImageHolder>
           <Image
@@ -116,6 +120,7 @@ const register = () => {
           </form>
         </RegisterBox>
       </RegisterWrapper>
+      </div>
     );
   }
 

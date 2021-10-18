@@ -6,7 +6,7 @@ padding: 1.5rem;
 height: 100%;
 position: fixed;
 background: #EFEFEF;
-z-index: 10;
+z-index: 30;
 `
 
 export const MobileHead = styled.div`

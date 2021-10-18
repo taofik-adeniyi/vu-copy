@@ -4,6 +4,9 @@ export const StyledRegisterType = styled.div`
 width: 100%; 
 height: 100%; 
 color: white;
+@media (max-width: ${({theme})=> theme.media.mobile}){
+margin-top: 5rem;
+}
 `
 
 export const RegisterTypeFlex = styled.div`

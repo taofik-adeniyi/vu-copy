@@ -1,9 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import { ConfirmEmailWrap, ConfirmImageWrap, Confirm, ConfirmSubDiv } from "../styled/confirm-email";
+import Header from '../comps/Header'
 
 const confirmemail = () => {
   return (
+    <div style={{position: 'absolute', width: '100%'}}>
+    <Header noheader={true} />
     <ConfirmEmailWrap>
       <Confirm>
           <ConfirmSubDiv>
@@ -23,6 +26,7 @@ const confirmemail = () => {
         />
       </ConfirmImageWrap>
     </ConfirmEmailWrap>
+    </div>
   );
 };
 

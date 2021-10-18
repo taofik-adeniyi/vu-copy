@@ -2,11 +2,14 @@ import React from 'react'
 import { StyledButton } from "./global-styles";
 import { useRouter } from 'next/router'
 import { StyledRegisterType, RegisterTypeFlex, Create, Choose, TypeCreator } from '../styled/register-type';
+import Header from '../comps/Header'
 
 
 const registertype = () => {
     const router = useRouter()
     return (
+      <div style={{position: 'absolute', width: '100%'}}>
+      <Header noheader={true} />
         <StyledRegisterType>
         <Create>
           Create your Viou account
@@ -63,6 +66,7 @@ const registertype = () => {
           </TypeCreator>
         </RegisterTypeFlex>
       </StyledRegisterType>
+      </div>
     )
 }
 
