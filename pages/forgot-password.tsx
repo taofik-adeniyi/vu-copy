@@ -2,11 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import { StyledInputPassword, PassWordStrenght } from '../styled/register'
 import { StyledButton } from './global-styles'
+import { FogotPasswordWrap, FogotPasswordImageWrap, FogotPasswordWrapper, FogotPasswordHolder } from '../styled/forgot-password'
 
 const forgotpassword = () => {
     return (
-        <div style={{width: '100%', display: 'flex'}}>
-            <div style={{ width: "45%", minHeight: "100vh", position: "relative" }}>
+        <FogotPasswordWrap>
+            <FogotPasswordImageWrap>
         <Image
           alt="Forgot page background image"
           src="/forgot-password.svg"
@@ -14,9 +15,9 @@ const forgotpassword = () => {
           objectFit="cover"
           loading="lazy"
         />
-      </div>
-      <div style={{width: '55%'}}>
-          <div style={{width: '350px', margin: '100px 0 0 100px'}}>
+      </FogotPasswordImageWrap>
+      <FogotPasswordWrapper>
+          <FogotPasswordHolder>
               <h1 style={{color: '#00F0FE', fontFamily: 'Overlock', fontSize: '36px'}}>Update Password</h1>
               <form style={{margin: '50px 0'}}>
                   <div style={{margin: '20px 0'}}>
@@ -53,9 +54,9 @@ const forgotpassword = () => {
                       <StyledButton background="#1EAAB2" width="350px">save changes</StyledButton>
                   </div>
               </form>
-          </div>
-      </div>
-        </div>
+          </FogotPasswordHolder>
+      </FogotPasswordWrapper>
+        </FogotPasswordWrap>
     )
 }
 

@@ -54,7 +54,7 @@ const Header = ({isBorder}: any) => {
           <StyledButton color="#fff" onClick={()=>router.push('/sign-in')}>
           sign in
           </StyledButton>
-          <StyledButton background="#1EAAB2" onClick={()=>router.push('/register')}>
+          <StyledButton background="#1EAAB2" onClick={()=>router.push('/register-type')}>
           sign up
           </StyledButton>
         </aside>

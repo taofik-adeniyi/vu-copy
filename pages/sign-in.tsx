@@ -5,6 +5,7 @@ import { StyledButton } from './global-styles'
 import Link from 'next/link'
 import { StyledLink } from '../styled/header'
 import { useRouter } from 'next/router'
+import { LogInImageHolder, LogInWrapper, LogInBox } from '../styled/login'
 
 const signin = () => {
     const router = useRouter()
@@ -14,8 +15,8 @@ const signin = () => {
     }
     const [step, setStep] = useState(0)
     return (
-        <div style={{display: 'flex'}}>
-            <div style={{ width: "45%", minHeight: "100vh", position: "relative" }}>
+        <LogInWrapper>
+            <LogInImageHolder>
         <Image
           alt="Login page background image"
           src="/loginbackground.svg"
@@ -23,9 +24,9 @@ const signin = () => {
           objectFit="cover"
           loading="lazy"
         />
-      </div>
-      <div style={{width: '55%', minHeight: '100vh'}}>
-            <div style={{margin: '100px 0 0 100px', color: '#F4F4F4', fontFamily: 'Overlock'}}>
+      </LogInImageHolder>
+      <LogInBox>
+            <div>
                 <h1 style={{color: '#00F0FE', fontSize: '36px', fontWeight: 'bold'}}>Log in to Viou</h1>
                 <h4>Enter your account credentials</h4>
 
@@ -52,8 +53,8 @@ const signin = () => {
                     </div>
                 </form>
             </div>
-      </div>
-        </div>
+      </LogInBox>
+        </LogInWrapper>
     )
 }
 

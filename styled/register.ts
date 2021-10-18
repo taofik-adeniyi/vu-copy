@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+
+export const RegisterWrapper = styled.div`
+  display: flex;
+  @media (max-width: ${({theme})=> theme.media.mobile}){
+    flex-direction: column-reverse;
+  }
+`
+export const RegisterImageHolder = styled.div`
+width: 45%;
+min-height: 100vh;
+position: relative;
+@media (max-width: ${({theme})=> theme.media.mobile}){
+  width: 100%;
+  /* min-height: 300px; */
+}
+`
+
+export const RegisterBox = styled.div`
+  width: 55%;
+  min-height: 100vh;
+  padding: 50px 50px 50px 100px;
+  @media (max-width: ${({theme})=> theme.media.mobile}){
+    padding: 2rem 2rem 5rem 2rem;
+    width: 100%;
+  }
+`
+
 type InputType = {
   width?: string;
   radius?: string;

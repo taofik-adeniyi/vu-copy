@@ -13,7 +13,8 @@ const myTheme: DefaultTheme = {
     secondary: 'Avenir'
   },
   media: {
-    mobile: '576px',
+    mobile: '768px',
+    // mobile: '576px',
     tablet: '768px',
     desktop: '992px'
   }

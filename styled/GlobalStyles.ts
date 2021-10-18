@@ -11,6 +11,8 @@ const GlobalStyles = createGlobalStyle`
         background-color: black;
     }
 
+    
+
     /*  Toggle Switch  */
 
 .toggleSwitch span span {
