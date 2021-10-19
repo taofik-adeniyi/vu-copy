@@ -56,6 +56,8 @@ const loginIn = async (e: any) => {
   }catch(error){
     console.log('log in error is >> ', error)
     setLoading(false)
+    {/*
+ // @ts-ignore */}
     message.error(`${error?.response?.data?.message || 'connection error'}`)
     // router.push('/')
   }

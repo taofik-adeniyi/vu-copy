@@ -3,6 +3,8 @@ import Switch from "react-switch"
 
 export const Toggle = () => {
     const [checked, setChecked] = useState(false);
+    {/*
+ // @ts-ignore */}
   const handleChange = nextChecked => {
     setChecked(nextChecked);
   };
