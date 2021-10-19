@@ -7,7 +7,7 @@ import { gallery } from "../../const";
 import { useRouter } from "next/router";
 import Library from "../../comps/Library";
 
-const index = () => {
+const Libraryindex = () => {
   const router = useRouter();
   const path = router.pathname;
   console.log("the current path name is", path);
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Libraryindex;

@@ -11,6 +11,7 @@ import { StyledButton } from './global-styles'
 import Toggle from '../comps/Toggle'
 import VirtualCard from '../comps/VirtualCard'
 
+
 const managerequest = () => {
     return (
         <MyLayout>
@@ -102,7 +103,7 @@ If you are looking for a logo, you should choose 'Logo Design' within the 'Graph
                             <td style={{display: 'flex', gap: '20px'}}>
                                 <div>
                                 <StyledDisplayPicture width="50px" height="50px" rounded="50%">
-                                    <Image src="/mydp.svg" layout="fill" loading="lazy" />
+                                    <Image src="/mydp.svg" layout="fill" loading="lazy" alt="image for display picture" />
                                 </StyledDisplayPicture>
                                 </div>
                                <div style={{fontSize: '12px', textAlign: 'start', fontFamily: 'Open Sans'}}>
