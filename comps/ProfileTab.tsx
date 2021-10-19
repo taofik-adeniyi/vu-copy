@@ -21,8 +21,12 @@ export interface ISubmitResult {
 }
 const ProfileTab = () => {
     const router = useRouter()
+    {/*
+ // @ts-ignore */}
   const [menu, setMenu] = useState<MenuType>(false);
   const handleMenu = () => {
+    {/*
+ // @ts-ignore */}
     setMenu(!menu);
   };
   return (
