@@ -30,6 +30,8 @@ import { navigation } from "../const";
 
 const MobileMenu = ({ close }: any) => {
   const router = useRouter();
+  {/*
+ // @ts-ignore */}
   const { colors } = myTheme;
   const [open, setOpen] = useState(false);
   return (
