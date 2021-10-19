@@ -15,8 +15,8 @@ const Libraryindex = () => {
   return (
     <MyLayout isBorder>
       <div style={{ width: "90%", margin: "0 auto 50px auto" }}>
-        <div style={{margin: '50px 0'}}>
-        <TagList />
+        <div style={{ margin: "50px 0" }}>
+          <TagList />
         </div>
         <Library />
       </div>

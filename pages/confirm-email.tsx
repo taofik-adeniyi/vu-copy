@@ -10,7 +10,7 @@ const confirmemail = () => {
     <ConfirmEmailWrap>
       <Confirm>
           <ConfirmSubDiv>
-          <h1 style={{color: '#00F0FE', fontFamily: 'Overlock', fontSize: '36px'}}>You're a click closer to becoming part of the Viou community.</h1>
+          <h1 style={{color: '#00F0FE', fontFamily: 'Overlock', fontSize: '36px'}}>You&apos;re a click closer to becoming part of the Viou community.</h1>
           <p style={{color: 'white', fontFamily: 'Avenir', fontSize: '20px'}}>
           A verfication link has been sent to you email asa****nt@g**il.com. go to your mailbox to verify you Viou account.
           </p>
