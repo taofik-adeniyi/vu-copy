@@ -21,7 +21,7 @@ const Row = (prop: RowType) => {
         </StyledRow>
     )
 }
-const requestshoot = () => {
+const Requestshoot = () => {
     const [sendRequest, setSendRequest] = useState(false)
     const handleRequest = (e: any) => {
         e.preventDefault()
@@ -146,4 +146,4 @@ const requestshoot = () => {
     )
 }
 
-export default requestshoot
+export default Requestshoot

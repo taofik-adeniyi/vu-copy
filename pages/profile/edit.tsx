@@ -15,7 +15,7 @@ const verify = () => {
         <span style={{color: '#34C581', fontStyle: 'italic', fontSize: '12px'}}>Verified</span>
     )
 }
-const edit = () => {
+const Edit = () => {
     const [step, setStep] = useState(4)
     return (
         <MyLayout>
@@ -242,4 +242,4 @@ const edit = () => {
     )
 }
 
-export default edit
+export default Edit

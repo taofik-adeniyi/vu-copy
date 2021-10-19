@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 import { NewUser, NewUserImageWrap, NewUserFormWrapper, NewUserFormHolder } from '../styled/new-user'
 import Header from '../comps/Header'
 
-const newuser = () => {
+const Newuser = () => {
     const router = useRouter()
     const handleConfirm = (e: any) => {
         e.preventDefault()
@@ -59,4 +59,4 @@ const newuser = () => {
     )
 }
 
-export default newuser
+export default Newuser

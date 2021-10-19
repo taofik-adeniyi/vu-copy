@@ -16,7 +16,7 @@ import { useRouter } from 'next/router'
 import Header from '../comps/Header'
 
 
-const register = () => {
+const Register = () => {
   const router = useRouter()
   const [step, setStep] = useState(0);
     const handleAccountType = (e: any) => {
@@ -124,4 +124,4 @@ const register = () => {
     );
   }
 
-export default register;
+export default Register;

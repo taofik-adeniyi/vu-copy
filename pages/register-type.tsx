@@ -5,7 +5,7 @@ import { StyledRegisterType, RegisterTypeFlex, Create, Choose, TypeCreator } fro
 import Header from '../comps/Header'
 
 
-const registertype = () => {
+const Registertype = () => {
     const router = useRouter()
     return (
       <div style={{position: 'absolute', width: '100%'}}>
@@ -70,4 +70,4 @@ const registertype = () => {
     )
 }
 
-export default registertype
+export default Registertype

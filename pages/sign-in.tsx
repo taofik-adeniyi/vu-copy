@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 import { LogInImageHolder, LogInWrapper, LogInBox } from '../styled/login'
 import Header from '../comps/Header'
 
-const signin = () => {
+const Signin = () => {
     const router = useRouter()
     console.log('path name is >>>>', router.pathname)
     const vans = router.pathname === "/sign-in" ? "SIGN UP" : "SIGN IN"
@@ -64,4 +64,4 @@ const signin = () => {
     )
 }
 
-export default signin
+export default Signin
