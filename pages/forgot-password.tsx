@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { StyledInputPassword, PassWordStrenght } from '../styled/register'
-import { StyledButton } from './global-styles'
+import { StyledButton } from '../styled/global-styles'
 import { FogotPasswordWrap, FogotPasswordImageWrap, FogotPasswordWrapper, FogotPasswordHolder } from '../styled/forgot-password'
 import Header from '../comps/Header'
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { StyledInputText, StyledSelectTag, StyledTextArea } from '../styled/register'
-import { StyledButton } from './global-styles'
+import { StyledButton } from '../styled/global-styles'
 import { useRouter } from 'next/router'
 import { NewUser, NewUserImageWrap, NewUserFormWrapper, NewUserFormHolder } from '../styled/new-user'
 import Header from '../comps/Header'

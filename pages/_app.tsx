@@ -1,8 +1,8 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
-import { myTheme } from "./theme/my-theme";
-import { MyGlobalStyle } from "./global-styles";
+import { myTheme } from "../theme/my-theme";
+import { MyGlobalStyle } from "../styled/global-styles";
 
 const GlobalStyle = createGlobalStyle`
   body {

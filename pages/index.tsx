@@ -18,7 +18,7 @@ import {
   Comments
 } from "../styled/home";
 import TheBox from "../comps/TheBox";
-import { StyledButton } from "./global-styles";
+import { StyledButton } from "../styled/global-styles";
 import facecapafro from "../assets/svg/facecapafro.svg";
 import maps from "../assets/svg/maps.svg";
 import Image from "next/image";

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { StyledButton } from '../pages/global-styles'
+import { StyledButton } from '../styled/global-styles'
 import { StyledCancelIcon } from '../styled/icons'
 import { StyledInputText, StyledTextArea } from '../styled/register'
 import Portal from './hoc/Portal'

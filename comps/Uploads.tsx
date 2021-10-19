@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledButton } from "../pages/global-styles";
+import { StyledButton } from "../styled/global-styles";
 import { StyledInputText } from "../styled/register";
 import { Flex } from "../styled/styles";
 import { UploadContainer, UploadHeader, UploadFooter, DragDrop, Trouble, Tags } from "../styled/upload";

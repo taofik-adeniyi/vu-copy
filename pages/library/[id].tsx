@@ -3,7 +3,7 @@ import Folder from "../../comps/Folder";
 import MyLayout from "../../comps/MyLayout";
 import TagList from "../../comps/TagList";
 import { RequestShoot } from "../../styled/styles";
-import { StyledButton } from "../global-styles";
+import { StyledButton } from "../../styled/global-styles";
 import Image from "next/image";
 import nikon from "../../assets/svg/nikon-camera.svg";
 import Modal from "../../comps/Modal";

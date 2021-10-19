@@ -3,7 +3,7 @@ import MyLayout from '../comps/MyLayout'
 import Tips from '../comps/Tips'
 import { StyledInputText, StyledSelectTag, StyledTextArea } from '../styled/register'
 import { InputContainer, InputTitle, StyledGroup, StyledLabel, StyledRow, StyledRowColumnOne, StyledRowColumnTwo } from '../styled/request'
-import { StyledButton } from './global-styles'
+import { StyledButton } from '../styled/global-styles'
 import Modal from '../comps/Modal'
 import { scroll2Top } from '../utils/scroll'
 

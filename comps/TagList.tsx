@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledButton } from '../pages/global-styles'
+import { StyledButton } from '../styled/global-styles'
 import Link from 'next/link'
 import { StyledLink } from '../styled/header'
 import { StyledUl, TagListWrapper } from '../styled/taglist'

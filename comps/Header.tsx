@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { StyledButton } from '../pages/global-styles';
+import { StyledButton } from '../styled/global-styles';
 import { StyledHeader, StyledMobileHeder } from "../styled/layout";
 import brand from "../assets/svg/viou-digital.svg"
 import cartsearch from "../assets/svg/cart-search.svg"

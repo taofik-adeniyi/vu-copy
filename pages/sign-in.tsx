@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { StyledInputPassword, StyledInputText, StyledSelectTag, StyledTextArea } from '../styled/register'
-import { StyledButton } from './global-styles'
+import { StyledButton } from '../styled/global-styles'
 import Link from 'next/link'
 import { StyledLink } from '../styled/header'
 import { useRouter } from 'next/router'

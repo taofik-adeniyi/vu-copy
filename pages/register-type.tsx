@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyledButton } from "./global-styles";
+import { StyledButton } from "../styled/global-styles";
 import { useRouter } from 'next/router'
 import { StyledRegisterType, RegisterTypeFlex, Create, Choose, TypeCreator } from '../styled/register-type';
 import Header from '../comps/Header'

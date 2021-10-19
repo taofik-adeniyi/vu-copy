@@ -1,6 +1,6 @@
 import React from "react";
 import MyLayout from "../comps/MyLayout";
-import { StyledButton } from "./global-styles";
+import { StyledButton } from "../styled/global-styles";
 import companylogos from "../assets/svg/company-logos.svg"
 import Image from 'next/image'
 import { Box } from "../styled/home";

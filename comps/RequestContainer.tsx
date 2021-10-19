@@ -1,6 +1,6 @@
 import Modal from './Modal'
 import React, { useState } from 'react'
-import { StyledButton } from '../pages/global-styles'
+import { StyledButton } from '../styled/global-styles'
 import { RequestShoot } from '../styled/styles'
 import { useRouter } from 'next/router'
 import Portal from './hoc/Portal'

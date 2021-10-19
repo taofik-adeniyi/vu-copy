@@ -23,8 +23,8 @@ import {
 } from "../styled/icons";
 import { CustomSearch } from "../styled/GlobalStyles";
 import { StyledInputText } from "../styled/register";
-import { StyledButton } from "../pages/global-styles";
-import { myTheme } from "../pages/theme/my-theme";
+import { StyledButton } from "../styled/global-styles";
+import { myTheme } from "../theme/my-theme";
 import { useRouter } from "next/router";
 import { navigation } from "../const";
 

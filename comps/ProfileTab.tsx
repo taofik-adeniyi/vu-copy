@@ -5,7 +5,7 @@ import Modal from "./Modal";
 import { ModalContainer } from "../styled/modal";
 import Portal from "./hoc/Portal";
 import { Flex, StyledDisplayPicture } from "../styled/styles";
-import { StyledButton } from "../pages/global-styles";
+import { StyledButton } from "../styled/global-styles";
 import { ProfileList, ProfileMenu } from "../styled/profile";
 import { StyledHeartIcon, StyledFolderIcon, StyledDownloadIcon } from "../styled/icons";
 import { StyledLink, StyledMenuLink } from "../styled/header";

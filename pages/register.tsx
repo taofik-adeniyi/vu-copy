@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { StyledButton } from "./global-styles";
+import { StyledButton } from "../styled/global-styles";
 import Image from "next/image";
 import {
     PassWordStrenght,

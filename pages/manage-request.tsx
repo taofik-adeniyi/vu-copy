@@ -7,7 +7,7 @@ import Modal from "../comps/Modal";
 import Portal from "../comps/hoc/Portal";
 import { StyledCancelIcon } from "../styled/icons";
 import Tips from "../comps/Tips";
-import { StyledButton } from "./global-styles";
+import { StyledButton } from "../styled/global-styles";
 import Toggle from "../comps/Toggle";
 import VirtualCard from "../comps/VirtualCard";
 

@@ -5,7 +5,7 @@ import { ProfileDataWrapper, StyledOl } from '../../styled/profile'
 import { ProfileWrapper } from '../../styled/profile'
 import { StyledSelectTag,  StyledTextArea } from '../../styled/register'
 import { NewStyledInput, NewStyledTextArea, StyledDisplayPicture, StyledImageContainer } from '../../styled/styles'
-import { StyledButton } from '../global-styles'
+import { StyledButton } from '../../styled/global-styles'
 import Image from 'next/image'
 import Tips from '../../comps/Tips'
 

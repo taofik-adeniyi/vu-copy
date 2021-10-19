@@ -6,7 +6,7 @@ import {
   faSearch,
 } from "@fortawesome/free-solid-svg-icons";
 import MyIcon from "./MyIcon";
-import { StyledButton } from "../pages/global-styles";
+import { StyledButton } from "../styled/global-styles";
 import Image from "next/image";
 import brand from "../assets/svg/viou-digital.svg";
 import Header from "./Header";

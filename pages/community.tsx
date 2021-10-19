@@ -1,7 +1,7 @@
 import React from 'react'
 import MyLayout from '../comps/MyLayout'
 import styles from "../styles/home.module.scss";
-import { StyledButton } from './global-styles';
+import { StyledButton } from '../styled/global-styles';
 import { community as comm } from '../const/index'
 
 

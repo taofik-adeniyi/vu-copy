@@ -2,7 +2,7 @@ import React from 'react'
 import Folder from '../comps/Folder'
 import MyLayout from '../comps/MyLayout'
 import RequestContainer from '../comps/RequestContainer'
-import { StyledButton } from './global-styles'
+import { StyledButton } from '../styled/global-styles'
 import CreateNewList from '../comps/CreateNewList'
 
 const favorites = () => {
