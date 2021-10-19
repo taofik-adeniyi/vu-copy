@@ -130,3 +130,7 @@ const navigation = [
         ]
     }
 ]
+
+export {
+    navigation
+}

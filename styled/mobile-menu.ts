@@ -39,23 +39,26 @@ padding: .7rem 0;
 
 type MobType = {
     txtcolor?: string;
+    margin?: string;
 }
 export const MobileUl = styled.ul<MobType>`
-margin: 1rem 0;
+margin: ${({margin})=> margin ? margin : '1rem 0'};
 padding: 0;
 list-style: none;
 font-family: ${({theme})=> theme.family.secondary};
 
     li {
         margin: 1.2rem 0;
-        display: flex; 
-        justify-content: space-between;
         color: ${({txtcolor})=> txtcolor ? txtcolor : 'none'};
-
-        > div {
-            display: flex;
+        position: relative;
+        .liflex {
+            display: flex; 
+            justify-content: space-between;
+            > div {
+                display: flex;
             gap: .3rem;
             align-items: center;
+            }
         }
     }
 `

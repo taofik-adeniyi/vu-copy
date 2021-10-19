@@ -1,3 +1,4 @@
+import { GetStaticProps, GetStaticPaths, GetServerSideProps } from "next";
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -25,6 +26,7 @@ import { StyledInputText } from "../styled/register";
 import { StyledButton } from "../pages/global-styles";
 import { myTheme } from "../pages/theme/my-theme";
 import { useRouter } from "next/router";
+import { navigation } from "../const";
 
 const MobileMenu = ({ close }: any) => {
   const router = useRouter();
@@ -64,45 +66,62 @@ const MobileMenu = ({ close }: any) => {
         <MobileSearchBar placeholder="Search" />
       </CustomSearch>
       <MobileUl txtcolor="#797979">
-        <li>
-          <div>Find Talent</div>
-          <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
-        </li>
-        <li>
-          <div>Browse Categories</div>
-          <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
-        </li>
-        <li>
-          <div>Explore</div>
-          <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
-        </li>
-        <li>
-          <div>Why Viou</div>
-          <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
-        </li>
+        {navigation &&
+          navigation?.map((navigate) => {
+            let id = navigate.id
+            let wee;
+            return (
+              <li key={navigate.id}>
+                <span className="liflex">
+                <div>{navigate?.name}</div>
+                <div>{open ? <StyledCaretUp onClick={()=> setOpen(!open)} /> : <StyledCaretDown onClick={()=> setOpen(!open)} />}</div>
+                </span>
+                <MobileUl margin="1rem .8rem">
+                  {/* {
+                    wee = navigation.filter(nav => nav.id === id)
+                  } */}
+                  {
+                    open && navigate.subnav && navigate.subnav?.map(sub=>{
+                      return (
+                        <li key={sub?.id}>{sub?.name}</li>
+                    )
+                    })
+                  }
+                </MobileUl>
+              </li>
+            );
+          })}
       </MobileUl>
       <MobileTitle>General</MobileTitle>
       <MobileUl>
         <li>
+        <div className="liflex">
           <div>Home</div>
           <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
+          </div>
         </li>
         <li>
-          <div>
+          <div className="liflex">
+            <div>
             English
             <StyledDisplayPicture width="20px" height="20px">
               <Image src={language} alt="Viou Digital Logo" layout="fill" />
             </StyledDisplayPicture>
-          </div>
+            </div>
           <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
+          </div>
         </li>
         <li>
+        <div className="liflex">
           <div>USD</div>
           <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
+          </div>
         </li>
         <li>
+        <div className="liflex">
           <div>Open in App</div>
           <div>{open ? <StyledCaretUp /> : <StyledCaretDown />}</div>
+          </div>
         </li>
       </MobileUl>
       <StyledButton background={colors.primary} style={{ marginTop: "3rem" }}>
